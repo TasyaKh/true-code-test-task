@@ -1,0 +1,42 @@
+@import "src/scss/vars";
+
+.main-page {
+  margin-bottom: 80px;
+
+  .img-live{
+    z-index: -1 !important;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin-top: 40px;
+
+    .img-above-form{
+      max-width: 222px;
+      max-height: 248px;
+    }
+
+
+    h3{
+      max-width: 244px;
+      margin-bottom: 20px;
+    }
+
+    h6 {
+      max-width: 307px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+    margin-top: 117px;
+
+    .open-gather{
+      margin-right: 100px;
+      max-width: 530px
+    }
+
+    h6 {
+      max-width: 307px;
+    }
+  }
+}

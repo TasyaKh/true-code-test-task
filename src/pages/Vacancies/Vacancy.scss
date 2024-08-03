@@ -1,0 +1,69 @@
+@import "src/scss/vars";
+
+.vacancy1 {
+
+  .p1{
+    max-width: 601px;
+  }
+
+  .text {
+    //max-width: 601px;
+    margin-right: 67.74px;
+  }
+
+  img {
+    height: 437.37px;
+    width: 437.37px;
+    transform: translateY(-37px);
+    //transform: rotate(45deg);
+  }
+
+
+  //
+  //@media (min-width: $mobile-breakpoint) {
+  //  margin-top: 117px;
+  //  h3{
+  //    width:530px
+  //  }
+  //}
+}
+
+
+
+.vacancy2{
+
+  .p1{
+    max-width: 403px;
+  }
+
+  .text {
+    max-width: 403px;
+    margin-right: 96px;
+  }
+
+  img {
+    height:500.79px;
+    width: 511.8px;
+    transform: translateY(-165px);
+    //transform: rotate(45deg);
+  }
+}
+
+.vacancy3{
+
+  .p1{
+    max-width: 635px;
+  }
+
+  .text {
+    max-width: 635px;
+    margin-right: 142px;
+  }
+
+  img {
+    width:310px;
+    height: 285px;
+    //transform: translateY(-57px);
+    //transform: rotate(45deg);
+  }
+}

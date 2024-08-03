@@ -1,0 +1,62 @@
+@import "scss/vars";
+
+.vacancy-template {
+
+  .img-gauss {
+    position: absolute;
+    top: 75px;
+    right: -230px;
+    //transform: translateX(50%);
+    z-index: 1;
+    width: 460px;
+    height: 463px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+
+
+    .btn-wrapper{
+      text-align: center;
+    }
+
+    .content {
+      margin-top: 35px;
+      margin-bottom: 35px;
+
+      .subtitle{
+        text-align: center;
+      }
+
+      .title {
+        margin: 0;
+      }
+
+      .text {
+        margin: 0px;
+      }
+    }
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+
+    .content {
+      margin-top: 40px;
+      margin-bottom: 80px;
+
+      .title {
+        margin-bottom: 60px;
+      }
+
+      .subtitle {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .content {
+
+    .title {
+      text-align: center;
+    }
+  }
+}

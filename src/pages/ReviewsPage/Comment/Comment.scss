@@ -1,0 +1,62 @@
+@import "src/scss/vars";
+
+.comment {
+
+  .p1{
+    margin: 0;
+  }
+
+  .comment-text {
+    outline: $border;
+    border-radius: 49px;
+    max-width: 490px;
+    padding: 25px 35px;
+
+    .author {
+      text-align: end;
+      margin-top: 15px;
+    }
+  }
+
+  .avatar {
+    border-radius: 100px;
+    overflow: hidden;
+    outline: $border;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+
+    .comment-wrapper {
+      gap:18px
+    }
+
+    .avatar {
+      width: 87px;
+      height: 87px;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+
+    .position{
+      max-width: 179px;
+    }
+
+    .avatar-wrapper {
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 54px;
+      height: 54px;
+    }
+  }
+
+}

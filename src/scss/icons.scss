@@ -1,0 +1,30 @@
+.icon-vk{
+  background-image: url("~/public/img/assets/icons/vk.svg") ;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  &:hover{
+    background-image: url("~/public/img/assets/icons/vk-hover.svg");
+  }
+}
+
+.icon-facebook{
+  background-image: url("~/public/img/assets/icons/facebook.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  &:hover{
+    background-image: url("~/public/img/assets/icons/facebook-hover.svg");
+  }
+}
+
+.icon-instagram{
+  background-image: url("~/public/img/assets/icons/instagram.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  &:hover{
+    background-image: url("~/public/img/assets/icons/instagram-hover.svg");
+  }
+}
+

@@ -1,0 +1,17 @@
+@import "../../../../scss/vars";
+
+.btns-cards {
+
+  .buttons{
+    gap: 20px;
+    justify-content: center;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+
+  }
+}
