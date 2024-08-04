@@ -2,6 +2,10 @@ import React, {FC} from 'react';
 import './WhoWePage.scss';
 import {Navbar} from "../../components/Navbar/Navbar";
 import {Footer} from "../../components/Footer/Footer";
+import {ProjectCards} from "./Cards/ProjectCards";
+import {TeamCards} from "./Cards/TeamCards";
+import {TeamPhotoCards} from "./Cards/TeamPhotoCards";
+import Carousel from "./Cards/Carousel";
 
 interface Props {
 }
@@ -58,23 +62,74 @@ export const WhoWePage: FC<Props> = () => {
                         </div>
 
                         <div className={"img-3d-wrapper "}>
-                            <img src={"/img/who-we/achievement.png"} alt={""}/>
+                            <img className={"img-ring"} src={"/img/who-we/achievement.png"} alt={"achievement"}/>
                         </div>
 
                         <h3 className={""}>
                             Золотой сайт
                         </h3>
 
-                        <table className={"table-achievements"}>
-                            {achievements && achievements.map(((el) => (
-                                <tr>
-                                    <td className={"year"}>{el.year}</td>
-                                    <td className={"place"}> {el.place}</td>
-                                    <td className={"site"}>{el.site}</td>
-                                </tr>
-                            )))}
-                        </table>
+                        <div className={"table-wrapper"}>
+                            <div className={"table-achievements"}>
+                                {achievements && achievements.map(((el) => (
+                                    <div className={"row"}>
+                                        <div className={"col-sm-auto col-12 year"}>{el.year}</div>
+                                        <div className={"col-sm-auto col-12 place"}> {el.place}</div>
+                                        <div className={"col-sm col-12 site"}>{el.site}</div>
+                                    </div>
+                                )))}
+                            </div>
+                        </div>
                     </div>
+
+                    {/* projects*/}
+                    <div className={"projects"}>
+                        <div className={"img-3d-wrapper "}>
+                            <img className={"img-ring"} src={"/img/who-we/keis.png"} alt={"projects"}/>
+                        </div>
+
+                        <ProjectCards/>
+
+                        {/* video*/}
+                        <div className={"video-wrapper"}>
+                            <div className={"video"}>
+                                <img className={"img-resizable"} src={"img/who-we/projects/img_3.png"} alt={"video"}/>
+                                <div className={"text-video"}>
+                                    showreel
+                                </div>
+                                <div className={"play"}>
+                                    <img className={"img-resizable"} src={"img/who-we/projects/play.png"} alt={"play"}/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* team*/}
+                    <div className={"team"}>
+                        <div className={"img-3d-wrapper"}>
+                            <img className={"img-ring"} src={"/img/who-we/team.png"} alt={"projects"}/>
+                        </div>
+                        <div className={"d-flex justify-content-center"}>
+                            <div className={"h6-p1 m-0"}>
+                                Когда-то true.code состоял из маленькой команды друзей и единомышленников. Сегодня в
+                                true.code работает 21 человек, но это все равно друзья и единомышленники или типа того,
+                                как-то красиво надо будет написать.
+                            </div>
+                        </div>
+                        <div>
+                            <TeamCards/>
+                        </div>
+                    </div>
+
+                    {/* team photo */}
+                    <div className={"team-photo"}>
+                        <div className={"header"}>
+                            Фото команды
+                        </div>
+                        <TeamPhotoCards/>
+
+                    </div>
+
                 </div>
             </div>
             <Footer/>

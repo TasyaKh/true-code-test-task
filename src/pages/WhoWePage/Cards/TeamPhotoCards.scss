@@ -1,0 +1,63 @@
+@import "../../../scss/vars";
+
+.team-photo-cards {
+
+  .team-p-card {
+    .card-img {
+      overflow: hidden;
+      outline: $border;
+      border-radius: $radius-20;
+      display: flex;
+      align-items: center;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin: 35px 0;
+
+    .cards-wrapper {
+      margin-top: 35px;
+      margin-bottom: 35px;
+      //gap: 5px;
+
+      .team-p-card {
+        padding-right: 5px;
+        .card-img {
+
+          height: 206px;
+          width: 276px;
+        }
+      }
+
+    }
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+    margin: 15px 0 0 0;
+
+    .cards-wrapper {
+      //gap: 35px;
+      margin-bottom: 40px;
+
+      .team-p-card {
+        padding-right: 35px;
+
+        .card-img {
+          height: 447px;
+          min-width: 804px;
+        }
+
+        &:first-child {
+          padding-left: 213px;
+        }
+
+      }
+
+    }
+  }
+}

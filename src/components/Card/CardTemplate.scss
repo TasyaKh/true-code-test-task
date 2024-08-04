@@ -1,6 +1,6 @@
 @import "src/scss/vars";
 
-.main-page {
+.card-template {
 
   .card {
     outline: $border;
@@ -49,7 +49,6 @@
 
   .card {
     padding: 23px 23px 25px 23px;
-
 
     .img-wrapper {
       max-width: 339px;

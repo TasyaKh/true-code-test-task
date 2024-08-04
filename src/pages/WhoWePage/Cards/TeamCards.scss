@@ -1,0 +1,83 @@
+@import "src/scss/vars";
+
+.team-cards {
+
+  .team-card {
+    .card-img {
+      outline: $border;
+      border-radius: $radius-20;
+      max-height: 400px;
+      max-width: 285px;
+    }
+
+    .card-text{
+      max-width: 285px;
+    }
+
+    .h4-h1, .h6-h6{
+      text-align: center;
+    }
+
+    .card-name {
+
+    }
+
+    .card-role {
+
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin: 35px 0;
+
+    .cards-wrapper {
+      margin-top: 82px;
+      margin-bottom: 92px;
+
+      gap: 35px;
+      justify-content: center;
+
+      .team-card{
+        .card-img {
+
+        }
+
+        .card-name {
+          margin-top: 15px;
+          margin-bottom: 7px;
+        }
+
+        .card-role {
+
+        }
+      }
+
+    }
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+    margin: 80px 0 0 0;
+
+    .cards-wrapper {
+      gap: 30px;
+      margin-top: 82px;
+      margin-bottom: 92px;
+
+      .team-card {
+        .card-img {
+
+        }
+
+        .card-name {
+          margin-top: 30px;
+          margin-bottom: 7px;
+        }
+
+        .card-role {
+
+        }
+      }
+
+    }
+  }
+}

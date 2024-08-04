@@ -15,7 +15,7 @@ export const Card: FC<Props> = ({
 
 
     return (
-        <div>
+        <div className={"card-template"}>
             <div className={"row"} >
                 <div className={"col-auto"}>
                     <div className={"card"}>

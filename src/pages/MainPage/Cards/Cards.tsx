@@ -43,7 +43,7 @@ export const Cards: FC<Props> = () => {
             {/*buttons*/}
             <div className={"row justify-content-center"}>
                 <div className={"buttons-forward mobile-hide"}>
-                    <BtnsCards/>
+                    <BtnsCards onBackClick={()=>{}} onForwardClick={()=>{}}/>
                 </div>
                 <div className={"pc-hide"}>
                     <div className={" d-flex justify-content-center"}>

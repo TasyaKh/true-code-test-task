@@ -26,7 +26,7 @@ export const ReviewsPage: FC<Props> = () => {
         },
         {
             id: 2,
-            avatar: "img/reviews/img.png",
+            avatar: "img/reviews/keis.png",
             author: "Екатерина Иванова \n " +
                 "менеджер проектов",
             text:

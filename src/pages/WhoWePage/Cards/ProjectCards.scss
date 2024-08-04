@@ -1,0 +1,50 @@
+@import "src/scss/vars";
+
+.project-cards {
+
+  .buttons-forward {
+    margin-top: 35px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin: 35px 0;
+
+    .cards-wrapper {
+      margin: 35px 0;
+
+      gap: 35px;
+      justify-content: center;
+
+      .buttons {
+        gap: 23px;
+      }
+
+
+      .btn {
+        width: 131px;
+        height: 48px;
+        padding: 0;
+      }
+
+    }
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+    margin: 80px 0 0 0;
+
+    .cards-wrapper {
+      gap: 35px;
+      margin: 35px 0;
+
+      .buttons {
+        gap: 24px;
+      }
+
+      .btn {
+        width: 158px;
+        height: 45px;
+        padding: 0;
+      }
+    }
+  }
+}
