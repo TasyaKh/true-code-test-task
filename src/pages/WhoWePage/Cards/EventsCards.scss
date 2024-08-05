@@ -1,0 +1,64 @@
+@import "src/scss/vars";
+
+.event-cards {
+
+  .event-card {
+
+    .card-img {
+      outline: $border;
+      border-radius: $radius-20;
+      overflow: hidden;
+    }
+
+    .card-title {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    margin: 35px 0;
+
+    .card-title {
+      margin-top: 30px;
+      margin-bottom: 6px;
+    }
+
+    .card-img {
+      max-height: 226px;
+    }
+
+    .cards-wrapper {
+      margin-top: 80px;
+      margin-bottom: 60px;
+
+      gap: 35px;
+      justify-content: center;
+
+      .team-card {
+        .card-img {
+
+        }
+
+      }
+
+    }
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+
+    .card-title {
+      margin-top: 40px;
+    }
+
+    .card-img {
+      height: 285px;
+      width: 280px;
+    }
+
+    .cards-wrapper {
+      gap: 35px;
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+  }
+}

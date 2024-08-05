@@ -1,0 +1,22 @@
+@import "src/scss/vars";
+
+.dropdown {
+
+  .title {
+    text-align: center;
+    cursor: pointer;
+
+    &.selected{
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+
+  }
+}
