@@ -11,7 +11,7 @@ export const TeamPhotoCards: FC<Props> = () => {
     const cards = [
         {id: 1, src: "img/who-we/team/img_4.png"},
         {id: 2, src: "img/who-we/team/img_5.jpg"},
-        // {id: 1, src: "img/who-we/team/img_4.png"},
+        // {id: 1, src: "img/who-we/team/img.png"},
         // {id: 2, src: "img/who-we/team/img_5.jpg"},
     ]
 
@@ -26,7 +26,6 @@ export const TeamPhotoCards: FC<Props> = () => {
                                 <img src={el.src} className={"img-resizable"} alt={""}/>
                             </div>
                         </div>
-
                     ))}
                 </Carousel>
             </div>

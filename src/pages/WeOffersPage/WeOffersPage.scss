@@ -18,6 +18,18 @@
     height: 1140px;
   }
 
+  .img-gauss1 {
+    position: absolute;
+    bottom: 0px;
+    right: 50%;
+    //position: fixed;
+    //text-align: center;
+    transform: translateX(50%) rotate(138deg);
+    z-index: -1;
+    width: 460px;
+    height: 463px;
+  }
+
   ul {
     padding-left: 1rem;
 

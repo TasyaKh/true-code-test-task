@@ -2,6 +2,39 @@
 
 .reviews-page {
   position: relative;
+  overflow: hidden;
+
+  .img-gauss {
+    position: absolute;
+    top: 283px;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: -1;
+    width: 561px;
+    height: 565px;
+  }
+
+
+  .img-gauss1 {
+    position: absolute;
+    bottom: 0px;
+    right: 50%;
+    //position: fixed;
+    //text-align: center;
+    transform: translateX(50%) rotate(138deg);
+    z-index: -1;
+    width: 460px;
+    height: 463px;
+  }
+
+  .img-experience{
+    position: absolute;
+    top: 611px;
+    left: -186px;
+    z-index: -1;
+    width: 517px;
+    height: 489px;
+  }
 
   .arrow-down{
     margin-top: 30px;

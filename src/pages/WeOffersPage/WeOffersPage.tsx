@@ -22,7 +22,8 @@ export const WeOffersPage: FC<Props> = () => {
 
                 <h4>ОБУЧЕНИЕ</h4>
                 <p className={"p1"}>
-                    Составляя программы стажировки и таблицу скиллов для роста, мы основывались на собственном опыте работы и использовали опыт других компаний.
+                    Составляя программы стажировки и таблицу скиллов для роста, мы основывались на собственном опыте
+                    работы и использовали опыт других компаний.
                 </p>
 
                 <h4>УСЛОВИЯ</h4>
@@ -44,6 +45,10 @@ export const WeOffersPage: FC<Props> = () => {
                 </p>
 
                 <div className={"img-gauss mobile-hide"}>
+                    <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                </div>
+
+                <div className={"img-gauss1 pc-hide"}>
                     <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
                 </div>
             </div>

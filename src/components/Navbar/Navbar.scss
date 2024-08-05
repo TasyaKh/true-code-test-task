@@ -1,12 +1,97 @@
-.navbar{
+@import "scss/vars";
+
+.navbar {
   padding-top: 25px;
   width: 100%;
   height: 100%;
   font-family: Panton-SemiBold, serif;
   font-weight: 600;
 
-  .phone-number{
+  .navbar-icon{
+    width: 28px;
+    height: 28px;
+  }
+
+  .phone-number {
     font-size: 16px;
+  }
+
+  .sub-menu-wrapper{
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .contacts-mobile{
+    margin-top: 114px;
+
+    .phone-number{
+      margin-bottom: 15px;
+    }
+  }
+
+  #collapse {
+    display: none;
+  }
+
+  label[for="collapse"] {
+    cursor: pointer;
+    display: none;
+  }
+
+
+    @media (max-width: $lg-breakpoint) {
+
+    .sub-link{
+      font-weight: 400 !important;
+      font-size: 13px !important;
+    }
+
+    .link{
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .menu-wrapper {
+      gap: 35px;
+      margin-bottom: 35px;
+    }
+
+    label[for="collapse"] {
+      display: initial;
+    }
+
+    .collapsible {
+      display: none;
+      padding: 55px 0;
+    }
+
+    #collapse:checked ~ .collapsible {
+      display: block;
+    }
+  }
+
+  @media (min-width: $lg-breakpoint) {
+
+
+    .link{
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .menu-wrapper {
+      gap: 25px;
+      padding: 0px 82px;
+    }
+
+    .collapsible {
+      display: flex;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
   }
 }
 

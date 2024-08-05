@@ -23,15 +23,14 @@ export const Vacancies: FC<Props> = () => {
                         </div>
 
                         <div className={"col-auto mobile-hide "} style={{marginRight: "112px"}}>
-                            <img src={"/img/keis.png"} className={"img-resizable"}
+                            <img src={"/img/img.png"} className={"img-resizable"}
                                  style={{width: "363px", height: "406px", transform: "translate(0px, -37px)"}}
                                  alt={""}/>
                         </div>
                         <div className={"col-auto  mobile-hide"}>
                             {/*<div className={""} style={{position: "relative", overflow:"hide"}}>*/}
-                            <div className={"d-flex img-live"}
-                                 style={{position: "absolute", top: "161px", right: "-268px"}}>
-                                <img src={"/gif/peack_with_us.gif"} style={{width: "536px"}}
+                            <div className={"d-flex img-live"}>
+                                <img src={"/gif/peack_with_us.gif"}
                                      className={"img-resizable"} alt={""}/>
 
                                 {/*</div>*/}
@@ -46,7 +45,7 @@ export const Vacancies: FC<Props> = () => {
                         </div>
 
                         <div className={"pc-hide img-above-form"}>
-                            <img className={"img-resizable"} src={"/img/keis.png"} alt={""}/>
+                            <img className={"img-resizable"} src={"/img/img.png"} alt={""}/>
                         </div>
 
                         <div className={""}>

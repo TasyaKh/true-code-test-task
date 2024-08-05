@@ -5,7 +5,7 @@ import {Footer} from "../../components/Footer/Footer";
 import {ProjectCards} from "./Cards/ProjectCards";
 import {TeamCards} from "./Cards/TeamCards";
 import {TeamPhotoCards} from "./Cards/TeamPhotoCards";
-import Carousel from "./Cards/Carousel";
+import {EventsCards} from "./Cards/EventsCards";
 
 interface Props {
 }
@@ -127,16 +127,62 @@ export const WhoWePage: FC<Props> = () => {
                             Фото команды
                         </div>
                         <TeamPhotoCards/>
+                    </div>
 
+                    {/*events*/}
+                    <div className={"team-events"}>
+                        <div className={"img-3d-wrapper"}>
+                            <img className={"img-ring"} src={"/img/who-we/events.png"} alt={"projects"}/>
+                        </div>
+                        <EventsCards/>
+                    </div>
+
+                    <div className={"who-we-footer"}>
+                        <h3>Присоединяйся!</h3>
+                        <div className={"text"}>
+                            <h6>
+                                Добро пожаловать к нам на
+                                <a className={"link-decoration"}
+                                   href={"https://t-code.ru"}> сайт</a>
+                            </h6>
+                        </div>
+
+                        <div className={"row contacts-wrapper justify-content-center"}>
+                            <div className={"col-sm-auto col-12 d-flex align-items-center justify-content-center"}>
+                                <a className={"phone "} href={"tel:+73952261260"}>
+                                    <div className={"p4"}>+7 (3952) 26-12-60</div>
+                                </a>
+                            </div>
+                            <div className={"col-sm-auto col-12"}>
+                                <div className={"row"}>
+                                    <div
+                                        className={"col-12 d-flex icons-wrapper align-items-center  justify-content-sm-end justify-content-center"}>
+                                        <div className={"who-we-icon icon-vk"}></div>
+                                        <div className={"who-we-icon icon-facebook"}></div>
+                                        <div className={"who-we-icon icon-instagram"}></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
             </div>
+
+            <div className={"img-gauss pc-hide"}>
+                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+            </div>
+
+            <div className={"img-gauss2 mobile-hide"}>
+                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+            </div>
+
+            <div className={"img-gauss3 mobile-hide"}>
+                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+            </div>
+
             <Footer/>
 
-            {/*<div className={"img-gauss"}>*/}
-            {/*    <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>*/}
-            {/*</div>*/}
         </div>
     )
 };

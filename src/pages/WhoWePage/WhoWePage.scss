@@ -4,6 +4,42 @@
   position: relative;
   overflow: hidden;
 
+  .img-gauss {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    //transform: translateX(50%);
+    z-index: -1;
+    width: 460px;
+    height: 463px;
+  }
+
+
+  .img-gauss2 {
+    position: absolute;
+    top: 760px;
+    left: -478px;
+    //right: 50%;
+    transform:  rotate(-155deg);
+    z-index: -1;
+    width: 956px;
+    height: 963px;
+  }
+
+  .img-gauss3 {
+    position: absolute;
+    bottom: -78px;
+    left: -338px;
+    z-index: -1;
+    width: 677px;
+    height: 682px;
+  }
+
+
+  .who-we-icon{
+    width: 50px;
+    height: 50px;
+  }
 
   .img-3d-wrapper {
     display: flex;
@@ -56,10 +92,6 @@
   }
 
 
-  .content {
-    margin-top: 123px;
-  }
-
   .img-gauss1 {
     position: absolute;
     top: 50%;
@@ -102,7 +134,7 @@
     }
   }
 
-  .team-photo{
+  .team-photo {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -112,8 +144,56 @@
     }
   }
 
+  .who-we-footer {
+    text-align: center;
+
+    .text {
+      text-align: center;
+    }
+  }
+
 
   @media (max-width: $mobile-breakpoint) {
+
+    .contacts-wrapper{
+      gap:30px;
+
+      .phone{
+        font-family: PantonLight, serif;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 36px;
+        letter-spacing: 0.03em;
+      }
+    }
+
+    .content {
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+
+    .icons-wrapper {
+      gap: 20px
+    }
+
+    .who-we-footer {
+      h3 {
+        margin-top: 35px;
+        margin-bottom: 30px;
+      }
+
+      .text {
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+
+      .phone-number {
+        display: flex;
+        justify-content: center;
+
+      }
+    }
 
     .team-photo {
       .header {
@@ -191,6 +271,39 @@
   }
 
   @media (min-width: $mobile-breakpoint) {
+
+    .content {
+      margin-top: 123px;
+      margin-bottom: 61px;
+    }
+
+
+    .contacts-wrapper{
+
+      .phone{
+        //styleName: P4 Text Mobile;
+        font-family: PantonSemiBold, serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.44px;
+        margin-right:  225px;
+      }
+    }
+
+    .icons-wrapper {
+      gap: 22px
+    }
+
+    .who-we-footer {
+      h3 {
+        margin-top: 60px;
+        margin-bottom: 40px;
+      }
+
+      .text{
+        margin-bottom: 40px;
+      }
+    }
 
     .team-photo {
       .header {

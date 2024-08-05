@@ -54,13 +54,16 @@ export const Comment: FC<Props> = ({
                 </div>
 
                 {/*text*/}
-                <div className={"col-sm-auto col-12"}>
+                <div className={"col-sm-auto  col-12"}>
                     <div className={"comment-text"}>
                         <div className={"p1"}>
                             {text}
                         </div>
                         <div className={"p6 author mobile-hide"}>
-                            {author}
+                            <div className={"author-text"}>
+                                {author}
+                            </div>
+
                         </div>
                     </div>
                 </div>

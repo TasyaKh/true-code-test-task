@@ -14,8 +14,7 @@ export const ReviewsPage: FC<Props> = () => {
         {
             id: 1,
             avatar: "img/reviews/img_1.png",
-            author: "Олег Комаров\n" +
-                "front-end разработчик",
+            author: `Олег Комаров \n front-end разработчик`,
             text:
                 `Стажировка в true.code погрузила меня в настоящую рабочую атмосферу — благодаря опытным наставникам я быстро изучил работу с современными инструментами,
                  новыми стандартами JavaScript 
@@ -26,7 +25,7 @@ export const ReviewsPage: FC<Props> = () => {
         },
         {
             id: 2,
-            avatar: "img/reviews/keis.png",
+            avatar: "img/reviews/img.png",
             author: "Екатерина Иванова \n " +
                 "менеджер проектов",
             text:
@@ -41,35 +40,52 @@ export const ReviewsPage: FC<Props> = () => {
     ]
     return (
         <div className="reviews-page">
-            <div className={"container-full"}>
-                <Navbar/>
-                <div className={"reviews-wrapper container"}>
-                    <h3 style={{textAlign: "center"}}>
-                        Наши отзывы
-                    </h3>
+            {/*<div className={"container-full"}>*/}
+            <Navbar/>
+            <div className={"reviews-wrapper container"}>
+                <h3 style={{textAlign: "center"}}>
+                    Наши отзывы
+                </h3>
 
-                    <div className={"reviews"}>
-                        <div className={"row comments"}>
-                            {comments && comments.map((el) => (
-                                <div className={"col-12"}>
-                                    <Comment text={el.text} author={el.author} avatar={el.avatar}
-                                             isAuthorLeftSide={el.isAuthorLeftSide}/>
-                                </div>
-                            ))}
-                        </div>
+                <div className={"reviews"}>
+                    <div className={"row comments"}>
+                        {comments && comments.map((el) => (
+                            <div className={"col-12"}>
+                                <Comment text={el.text} author={el.author} avatar={el.avatar}
+                                         isAuthorLeftSide={el.isAuthorLeftSide}/>
+                            </div>
+                        ))}
+                    </div>
 
-                        {/*buttons*/}
-                        <div className={"row justify-content-center"}>
-                            <div className={"arrow-down"}>
-                                <div className={" d-flex justify-content-center"}>
-                                    <BtnArrowDown/>
-                                </div>
+                    {/*buttons*/}
+                    <div className={"row justify-content-center"}>
+                        <div className={"arrow-down"}>
+                            <div className={" d-flex justify-content-center"}>
+                                <BtnArrowDown/>
                             </div>
                         </div>
                     </div>
                 </div>
-                <Footer/>
             </div>
+
+            <div className={"img-gauss mobile-hide"}>
+                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+            </div>
+
+            <div className={"img-gauss1 pc-hide"}>
+                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+            </div>
+
+            {/*experience*/}
+            <div className={"img-experience mobile-hide"}>
+                <img src={"/gif/experience.gif"}
+                     className={"img-resizable"} alt={""}/>
+
+                {/*</div>*/}
+            </div>
+            <Footer/>
+            {/*</div>*/}
+
 
         </div>
     )

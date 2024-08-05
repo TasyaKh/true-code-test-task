@@ -12,7 +12,7 @@ export const RulesPage: FC<Props> = () => {
         <div className="rules-page">
             <Navbar/>
             <div className={"container"}>
-                <h3  style={{textAlign: "center"}}>
+                <h3 style={{textAlign: "center"}}>
                     Наши правила
                 </h3>
                 <p className={"p1"}>
@@ -161,6 +161,10 @@ export const RulesPage: FC<Props> = () => {
                     </ul>
                 </p>
                 <div className={"img-gauss mobile-hide"}>
+                    <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                </div>
+
+                <div className={"img-gauss1 pc-hide"}>
                     <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
                 </div>
             </div>

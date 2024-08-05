@@ -4,7 +4,12 @@
   margin-bottom: 80px;
 
   .img-live{
-    z-index: -1 !important;
+    z-index: -1;
+    position: absolute;
+    top: 161px;
+    right: -105px;
+    width: 332px;
+    height: 325px;
   }
 
   @media (max-width: $mobile-breakpoint) {
