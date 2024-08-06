@@ -3,6 +3,7 @@ import './Vacancies.scss';
 import {Cards} from "./Cards/Cards";
 import {Navbar} from "../../components/Navbar/Navbar";
 import {Footer} from "../../components/Footer/Footer";
+import {Form} from "../../components/Form/Form";
 
 interface Props {
 }
@@ -48,8 +49,9 @@ export const Vacancies: FC<Props> = () => {
                             <img className={"img-resizable"} src={"/img/img.png"} alt={""}/>
                         </div>
 
-                        <div className={""}>
-
+                        <div className={"form-elem"} style={{width:"100%"}}>
+                            <div className={"form-header"}>Заявка</div>
+                            <Form />
                         </div>
                     </div>
                 </div>

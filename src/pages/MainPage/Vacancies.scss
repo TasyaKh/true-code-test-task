@@ -1,7 +1,6 @@
 @import "src/scss/vars";
 
 .main-page {
-  margin-bottom: 80px;
 
   .img-live{
     z-index: -1;
@@ -12,9 +11,29 @@
     height: 325px;
   }
 
+  .form-elem{
+
+    .form-header{
+      font-family: Panton, serif;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
   @media (max-width: $mobile-breakpoint) {
     margin-top: 40px;
+    margin-bottom: 35px;
 
+    .form-elem{
+
+      .form-header{
+        margin-top: 35px;
+        margin-bottom: 35px;
+
+        font-size: 24px;
+        line-height: 28.8px;
+      }
+    }
     .img-above-form{
       max-width: 222px;
       max-height: 248px;
@@ -34,6 +53,18 @@
 
   @media (min-width: $mobile-breakpoint) {
     margin-top: 117px;
+    margin-bottom: 80px;
+
+    .form-elem{
+      .form-header{
+        margin-top: 80px;
+        margin-bottom: 60px;
+
+        font-size: 36px;
+        line-height: 43.2px;
+
+      }
+    }
 
     .open-gather{
       margin-right: 100px;

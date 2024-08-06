@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import './TeamPhotoCards.scss';
-import Carousel from "./Carousel";
+import Carousel from "../../../components/elements/Carousel/Carousel";
 
 interface Props {
 

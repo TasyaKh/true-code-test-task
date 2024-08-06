@@ -85,6 +85,10 @@
 
     .collapsible {
       display: flex;
+
+      .logo-wrapper{
+        max-height: 56px;
+      }
     }
 
     ul {

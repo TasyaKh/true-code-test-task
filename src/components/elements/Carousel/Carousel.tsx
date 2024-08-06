@@ -1,6 +1,6 @@
 import React, {Children} from 'react'
 import "./Carousel.scss"
-import {BtnsCards} from "../../../components/elements/buttons/BtnsCards/BtnsCards";
+import {BtnsCards} from "../buttons/BtnsCards/BtnsCards";
 
 export interface ICarouselProps {
     persentScroll?: number

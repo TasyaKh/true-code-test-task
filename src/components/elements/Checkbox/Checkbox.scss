@@ -1,0 +1,56 @@
+@import "src/scss/vars";
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Hide the default checkbox */
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+
+  }
+
+
+
+  /* Style the custom checkbox */
+  .custom-checkbox .checkbox-image {
+    display: inline-block;
+    width: 28px; /* Adjust size as needed */
+    height: 28px; /* Adjust size as needed */
+    background-image: none; /* Path to unchecked image */
+    outline: $border;
+    border-radius: 8px;
+    background-size: contain;
+    cursor: pointer;
+
+    img {
+      display: none;
+      width: 19px;
+      height: 28px;
+      transform: translate(9px, -5px);
+    }
+  }
+
+  /* Change the image when the checkbox is checked */
+  .custom-checkbox input[type="checkbox"]:checked + .checkbox-image {
+    // background-image: url('~/public/img/assets/icons/checkbox-checked.svg');
+    img {
+      display: block
+    }
+  }
+
+
+  @media (max-width: $mobile-breakpoint) {
+
+    .checkbox-label {
+      max-width: 226px;
+    }
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+
+    .checkbox-label {
+      max-width: 342px;
+    }
+  }
+}

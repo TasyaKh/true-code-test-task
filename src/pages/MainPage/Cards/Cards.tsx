@@ -1,9 +1,10 @@
-import {FC} from 'react';
+import React, {FC} from 'react';
 import './Cards.scss';
 import {Link} from "react-router-dom";
 import {Card} from "../../../components/Card/CardTemplate";
 import {BtnsCards} from "../../../components/elements/buttons/BtnsCards/BtnsCards";
 import {BtnArrowDown} from "../../../components/elements/buttons/BtnArrowDown/BtnArrowDown";
+import Carousel from "../../../components/elements/Carousel/Carousel";
 
 interface Props {
 
@@ -32,7 +33,18 @@ export const Cards: FC<Props> = () => {
 
     return (
         <div className={"cards"}>
+            {/*<Carousel show={3} persentScroll={100}>*/}
+            {/*    /!*<div className={"row cards-wrapper justify-content-center"}>*!/*/}
+            {/*    {cards && cards.map((el) => (*/}
+            {/*        // <div className={"col-auto"}>*/}
+            {/*        <Card footerChild={cardFooter(el.link)} title={el.name} imgSrc={el.src}/>*/}
+            {/*        // </div>*/}
+            {/*    ))}*/}
+            {/*    /!*</div>*!/*/}
+
+            {/*</Carousel>*/}
             <div className={"row cards-wrapper justify-content-center"}>
+
                 {cards && cards.map((el) => (
 
                     <div className={"col-auto"}>

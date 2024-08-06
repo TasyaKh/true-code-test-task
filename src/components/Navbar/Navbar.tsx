@@ -56,7 +56,7 @@ export const Navbar: FC<Props> = () => {
                 <div className="collapsible">
                     <div className={"row"}>
                         {/*logo*/}
-                        <div className={"d-none d-lg-block col-auto"} style={{paddingRight: "125px"}}>
+                        <div className={"d-none d-lg-block col-auto logo-wrapper"} style={{paddingRight: "125px"}}>
                             <Link to={"/"}>
                                 <img src={"/img/logo-full.png"} style={{width: "174px", height: "56px"}}
                                      alt={"logo"}/>

@@ -39,10 +39,10 @@ export const Footer: FC<Props> = () => {
                     </div>
                     <div
                         className={"col-sm-auto col-12 d-flex justify-content-sm-end justify-content-center btn-footer"}>
-                        <button className={"btn light"}>Подать заявку</button>
+                        <button className={"mx-4 m-md-0 btn light"}>Подать заявку</button>
                     </div>
                     <div className={"col-sm-auto col-12 d-flex justify-content-center"}>
-                        <div className={"pc-hide year"}>
+                        <div className={" pc-hide year"}>
                             @ 2021
                         </div>
                     </div>

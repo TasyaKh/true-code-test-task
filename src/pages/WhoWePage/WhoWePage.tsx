@@ -25,7 +25,7 @@ export const WhoWePage: FC<Props> = () => {
             <div className="content">
                 <div className={"container"}>
                     {/*top */}
-                    <div className={"row"}>
+                    <div className={"row top"}>
                         <div className={"col text-1"}>
                             <div className={"logo"}>
                                 <img src={"/img/logo-short.svg"} alt={""}/>
@@ -38,9 +38,10 @@ export const WhoWePage: FC<Props> = () => {
                         </div>
                         <div className={"col mobile-hide"}>
                             <div className={"true-gif"}>
-                                <div className={"img-gif"}>
-                                    <img className={""} src={"/gif/true.gif"} alt={"true gif"}/>
+                                <div className={"animate-circle"}>
+                                    <img className={""} src={"img/animate/truecode.png"} alt={""}/>
                                 </div>
+
                                 <div className={"img-gauss1"}>
                                     <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
                                 </div>

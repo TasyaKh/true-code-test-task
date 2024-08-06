@@ -20,7 +20,7 @@
     top: 760px;
     left: -478px;
     //right: 50%;
-    transform:  rotate(-155deg);
+    transform: rotate(-155deg);
     z-index: -1;
     width: 956px;
     height: 963px;
@@ -36,7 +36,7 @@
   }
 
 
-  .who-we-icon{
+  .who-we-icon {
     width: 50px;
     height: 50px;
   }
@@ -83,8 +83,8 @@
       .video {
         overflow: hidden;
         position: relative;
-        max-width: 1160px;
-        max-height: 600px;
+        max-width: 1162px;
+        max-height: 654px;
         outline: $border;
         border-radius: $radius-20;
       }
@@ -109,12 +109,6 @@
     width: 279px;
     max-height: 275px;
 
-    .img-gif {
-      width: 279px;
-      height: 275px;
-      object-fit: cover;
-    }
-
     img {
       width: 100%;
       height: 100%;
@@ -126,6 +120,8 @@
     .text-video {
       position: absolute;
       font-weight: 700;
+      width: 393px;
+      text-align: center;
     }
 
     .play {
@@ -155,11 +151,11 @@
 
   @media (max-width: $mobile-breakpoint) {
 
-    .contacts-wrapper{
-      gap:30px;
+    .contacts-wrapper {
+      gap: 30px;
 
-      .phone{
-        font-family: PantonLight, serif;
+      .phone {
+        font-family: Panton-Light, serif;
         font-size: 24px;
         font-weight: 300;
         line-height: 36px;
@@ -272,21 +268,38 @@
 
   @media (min-width: $mobile-breakpoint) {
 
+    .team-events{
+      .img-3d-wrapper{
+        margin-bottom: 80px;
+      }
+    }
+    .top{
+      h6{
+        max-width: 557px;
+      }
+    }
     .content {
       margin-top: 123px;
-      margin-bottom: 61px;
+      margin-bottom: 68px;
     }
 
 
-    .contacts-wrapper{
+    .contacts-wrapper {
 
-      .phone{
+      .phone {
+        margin-right: 225px;
+
+        .p4{
+          font-family: Panton-Light,serif;
+          font-size: 24px;
+          font-weight: 300;
+          line-height: 36px;
+          letter-spacing: 0.03em;
+          text-align: left;
+        }
         //styleName: P4 Text Mobile;
-        font-family: PantonSemiBold, serif;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 19.44px;
-        margin-right:  225px;
+
+
       }
     }
 
@@ -300,7 +313,11 @@
         margin-bottom: 40px;
       }
 
-      .text{
+      h6{
+        margin: 0;
+      }
+
+      .text {
         margin-bottom: 40px;
       }
     }
@@ -324,8 +341,8 @@
         }
 
         .play {
-          max-width: 168px;
-          max-height: 168px;
+          max-width: 116px;
+          max-height: 116px;
           bottom: 58px;
           right: 58px;
         }
@@ -398,7 +415,7 @@
 
     .text-1 {
       min-width: 557px;
-      padding-right: 171px;
+      padding-right: 230px;
 
     }
 

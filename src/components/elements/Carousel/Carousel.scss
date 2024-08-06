@@ -1,4 +1,4 @@
-@import "src/scss/vars";
+@import "../../../scss/vars";
 
 @media (max-width: $mobile-breakpoint) {
   .carousel-wrapper {
@@ -8,7 +8,7 @@
 
 @media (min-width: $mobile-breakpoint) {
   .carousel-wrapper {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
   }
 }
 

@@ -152,6 +152,18 @@ h4 {
 }
 
 
+.animate-circle > img {
+  animation: rotate 8s linear infinite;
+  //transform-origin: 50;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
 // phone
 @media (max-width: $mobile-breakpoint) {
 
@@ -317,14 +329,15 @@ h4 {
     font-size: 48px;
     font-family: Panton, serif;
     font-weight: 700;
-    line-height: 57.6px;
+   // line-height: 57.6px;
+    line-height: 3rem;
   }
 
   h4 {
     font-size: 24px;
     font-family: Panton, serif;
     font-weight: 700;
-    line-height: 28.8px;
+    line-height: 24px;
     margin: 30px 0;
   }
 
@@ -345,10 +358,13 @@ h4 {
   }
 
   .p1 {
+    //styleName: P1;
+    font-family: Panton-Light,serif;
     font-size: 16px;
-    font-family: Panton-Light, serif;
     font-weight: 300;
-    line-height: 26px;
+    line-height: 1.52;
+    text-align: left;
+
     color: var(--bg-2);
     margin: 30px 0;
   }

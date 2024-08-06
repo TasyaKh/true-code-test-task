@@ -42,8 +42,16 @@
 
 
   @media (min-width: $mobile-breakpoint) {
-    .container {
+
+    .content-wrapper{
       margin-bottom: 80px;
+    }
+    .stydy{
+      max-width: 640px;
+    }
+
+    .container {
+      //margin-bottom: 80px;
     }
 
     h3 {
