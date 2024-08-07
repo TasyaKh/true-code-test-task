@@ -61,7 +61,6 @@ export const Form: FC<Props> = () => {
             data.append('namePractice', formData.namePractice);
             data.append('linkPortfolio', formData.linkPortfolio);
             data.append('about', formData.about);
-            // data.append('subject', "Стажировка");
             data.append('to', MAIL_TO);
 
             // Add file if selected
@@ -73,10 +72,10 @@ export const Form: FC<Props> = () => {
             axiosInstance.post("wp-json/wp/v2/send-mail", data)
                 .then((response) => response)
                 .then((result) => {
-                    setMailResponse({...mailResponse, message: "Успешно отправлено!"})
+                    setMailResponse({error: "", message: result.data})
                 })
                 .catch((error) => {
-                    setMailResponse({...mailResponse, message: "Ошибка! " + error})
+                    setMailResponse({message: "", error: "Ошибка! " + error})
                 });
         }else {
             setMailResponse({...mailResponse, error: "Ошибка! Проверьте поля перед отправкой."})

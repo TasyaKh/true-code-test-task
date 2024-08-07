@@ -22,8 +22,8 @@ export const Footer: FC<Props> = () => {
 
 
     return (
-            <div className={"footer"}>
-                <div className={"footer-wrapper"}>
+        <div className={"footer"}>
+            <div className={"footer-wrapper"}>
                 <div className={"row footer-content-wrapper"}>
                     {/*logo*/}
                     <div className={"col-sm-auto col-12 justify-content-center justify-content-sm-start d-flex"}>
@@ -31,13 +31,13 @@ export const Footer: FC<Props> = () => {
                             <Link to={"/"}>
                                 <img className={"img-contain"} src={data?.logo_full} alt={"logo"}/>
                             </Link>
-                            <div className={"text-main mobile-hide year"} >{data?.year}</div>
+                            <div className={"text-main mobile-hide year"}>{data?.year}</div>
                         </div>
                     </div>
                     {/*contacts*/}
                     <div className={"col-sm col-12"}>
                         <div className={"row contacts"}>
-                            <div className={"col-12 d-flex justify-content-sm-end justify-content-center"} >
+                            <div className={"col-12 d-flex justify-content-sm-end justify-content-center"}>
                                 <a className={"phone "} href={`tel:${data?.phone?.number_link}`}>
                                     <div className={"p4"}>{data?.phone?.number}</div>
                                 </a>
@@ -58,7 +58,9 @@ export const Footer: FC<Props> = () => {
                     </div>
                     <div
                         className={"col-sm-auto col-12 d-flex justify-content-sm-end justify-content-center btn-footer"}>
-                        <button className={"mx-4 m-md-0 btn light"}>Подать заявку</button>
+                        <Link to={"/form"}>
+                            <button className={"mx-4 m-md-0 btn light"}>Подать заявку</button>
+                        </Link>
                     </div>
                     <div className={"col-sm-auto col-12 d-flex justify-content-center"}>
                         <div className={" pc-hide year"}>

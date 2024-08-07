@@ -1,13 +1,26 @@
-import React, {FC} from "react";
+import React, {FC, useEffect, useState} from "react";
 import "./Navbar.scss"
 import {Link} from "react-router-dom";
 import {Dropdown} from "../elements/Dropdown";
+import {getFooterContent, getHeaderContent} from "../../api/pages";
 
 interface Props {
 
 }
 
 export const Navbar: FC<Props> = () => {
+
+    const [data, setData] = useState<any>()
+
+    useEffect(() => {
+        getHeader()
+    }, []);
+
+    const getHeader = async () => {
+        const d = await getHeaderContent()
+        setData(d)
+    }
+
 
     const dropdownVacancy = [
         {id: 1, name: "Веб-дизайнер", redirect: "/vacancy-1"},
@@ -43,13 +56,18 @@ export const Navbar: FC<Props> = () => {
                     <div className={"col"}>
                         <div className={"col-auto"}>
                             <div className={" phone-number"} style={{marginBottom: "12px"}}>
-                                +7 (3952) 26-12-60
+                                <a className={"phone "} href={`tel:${data?.phone?.number_link}`}>
+                                    {data?.phone?.number}
+                                </a>
                             </div>
+
                             <a className={""}>support@t-code.ru</a>
                         </div>
                     </div>
                     <div className={"col-auto d-flex justify-content-center"}>
-                        <button className={"btn light btn-send-request"}>Подать заявку</button>
+                        <Link to={"/form"}>
+                            <button className={"btn light btn-send-request"}>Подать заявку</button>
+                        </Link>
                     </div>
                 </div>
                 <input type="checkbox" id="collapse"/>
@@ -63,9 +81,12 @@ export const Navbar: FC<Props> = () => {
                             </Link>
                         </div>
                         <div className={"d-none d-lg-flex col-auto d-flex align-items-center phone-number"}>
-                            +7 (3952) 26-12-60
+                            <a className={"phone "} href={`tel:${data?.phone?.number_link}`}>
+                                {data?.phone?.number}
+                            </a>
                         </div>
-                        <div className={"col-auto d-flex align-items-center justify-content-center"} >
+
+                        <div className={"col-auto d-flex align-items-center justify-content-center"}>
                             <div className={"row menu-wrapper"}>
                                 {menu && menu.map((el) =>
                                     <div className={"col-12 col-lg-auto p-0 d-flex justify-content-center"}>
@@ -82,7 +103,8 @@ export const Navbar: FC<Props> = () => {
                                                                 className={"col-12 col-lg-auto p-0 d-flex justify-content-center " +
                                                                     ""}>
                                                                 <Link to={el.redirect}>
-                                                                    <div className={"sub-link link"}> {el.name}</div>
+                                                                    <div
+                                                                        className={"sub-link link"}> {el.name}</div>
                                                                 </Link>
 
                                                             </div>
@@ -104,13 +126,19 @@ export const Navbar: FC<Props> = () => {
 
                         </div>
                         <div className={"col-12 col-lg d-flex justify-content-center align-items-center"}>
-                            <button className={"btn light btn-send-request"}>Подать заявку</button>
+                            <Link to={"/form"}>
+                                <button className={"btn light btn-send-request"}>Подать заявку</button>
+                            </Link>
                         </div>
                         <div className={"contacts-mobile row d-lg-none d-flex"}>
+
                             <div className={"col-12 d-flex justify-content-center phone-number"}>
-                                +7 (3952) 26-12-60
+                                <a className={"phone "} href={`tel:${data?.phone?.number_link}`}>
+                                    {data?.phone?.number}
+                                </a>
                             </div>
-                            <div className={"col-12 d-flex justify-content-center "}
+
+                        <div className={"col-12 d-flex justify-content-center "}
                                  style={{gap: "11.7px"}}>
                                 <div className={"navbar-icon icon-vk"}></div>
                                 <div className={"navbar-icon icon-facebook"}></div>

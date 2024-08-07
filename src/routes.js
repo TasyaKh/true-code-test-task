@@ -11,6 +11,8 @@ import {WhoWePage} from "./pages/WhoWePage/WhoWePage";
 import {ReviewsPage} from "./pages/ReviewsPage/ReviewsPage";
 import {Vacancy} from "./pages/Vacancies/Vacancy";
 import {VacancyWrapper} from "./pages/MainPage/VacancyWrapper";
+import {Form} from "./components/Form/Form";
+import {FormPage} from "./pages/FormPage/FormPage";
 
 
 export const useRoutes = () => {
@@ -34,6 +36,10 @@ export const useRoutes = () => {
 
             <Route path="/reviews">
                 <ReviewsPage/>
+            </Route>
+
+            <Route path="/form">
+                <FormPage/>
             </Route>
 
             {/*vacancies */}

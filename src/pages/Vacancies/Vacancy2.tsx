@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import './Vacancy.scss';
 import {VacancyTemplate} from "../../components/VacancyTemplate";
+import {Link} from "react-router-dom";
 
 interface Props {
     vacancy: any
@@ -19,9 +20,11 @@ export const Vacancy2: FC<Props> = ({vacancy}) => {
                         <p className={"p1"} dangerouslySetInnerHTML={{__html: vacancy?.text}}>
                         </p>
                         <div className={"btn-wrapper"}>
+                            <Link to={"/form"}>
                             <button className={"btn light"}>
                                 Подать заявку
                             </button>
+                            </Link>
                         </div>
                     </div>
                 </div>

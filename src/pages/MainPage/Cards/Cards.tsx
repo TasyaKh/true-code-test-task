@@ -22,7 +22,8 @@ export const Cards: FC<Props> = ({cards}) => {
         if (cards) {
             const c = Object.keys(cards).map((key) => (
                 <div className={"col-auto"}>
-                    <Card footerChild={cardFooter(cards[key].vacancy_key)} title={cards[key].title} imgSrc={cards[key]?.img}/>
+                    <Card footerChild={cardFooter(cards[key].vacancy_key)} title={cards[key].title}
+                          imgSrc={cards[key]?.img}/>
                 </div>
             ))
             setCardsElems(c)
@@ -38,7 +39,9 @@ export const Cards: FC<Props> = ({cards}) => {
                 </Link>
             </div>
             <div className={"col"}>
-                <button className={"btn dark"}>Подать заявку</button>
+                <Link to={"/form"}>
+                    <button className={"btn dark"}>Подать заявку</button>
+                </Link>
             </div>
         </div>
     )
@@ -50,7 +53,8 @@ export const Cards: FC<Props> = ({cards}) => {
             </div>
 
             <div className={"pc-hide"}>
-                <ExpandableElem childs={cardsElems ?? []} expandCount={3} visibleCount={3} cardsStyle={"cards-wrapper"}/>
+                <ExpandableElem childs={cardsElems ?? []} expandCount={3} visibleCount={3}
+                                cardsStyle={"cards-wrapper"}/>
             </div>
         </div>
     )
