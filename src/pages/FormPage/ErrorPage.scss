@@ -1,0 +1,61 @@
+@import "src/scss/vars";
+
+.form-page {
+  position: relative;
+  overflow: hidden;
+
+  .img-gauss {
+    position: absolute;
+    top: 24px;
+    left: -478px;
+    z-index: -1;
+    width: 956px;
+    height: 963px;
+  }
+
+  .form-page-wrapper{
+    margin-top: 62px;
+    margin-bottom: 80px;
+  }
+
+
+  .form-elem{
+    .form-header{
+      font-family: Panton, serif;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+
+    .form-elem{
+
+      .form-header{
+        margin-bottom: 35px;
+
+        font-size: 24px;
+        line-height: 28.8px;
+      }
+    }
+    .img-above-form{
+      max-width: 222px;
+      max-height: 248px;
+    }
+
+
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+    .form-elem {
+      .form-header {
+        margin-bottom: 60px;
+
+        font-size: 36px;
+        line-height: 43.2px;
+
+      }
+    }
+  }
+
+}
