@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import './WhoWePage.scss';
 import {Navbar} from "../../components/Navbar/Navbar";
 import {Footer} from "../../components/Footer/Footer";
@@ -6,18 +6,31 @@ import {ProjectCards} from "./Cards/ProjectCards";
 import {TeamCards} from "./Cards/TeamCards";
 import {TeamPhotoCards} from "./Cards/TeamPhotoCards";
 import {EventsCards} from "./Cards/EventsCards";
+import { getWhoWePage} from "../../api/pages";
 
 interface Props {
 }
 
 export const WhoWePage: FC<Props> = () => {
 
-    const achievements = [
-        {year: "2020", place: "3 место", site: "Сайт Гора Соболиная"},
-        {year: "2019", place: "Лучший сайт гостиницы/отеля", site: "Сайт Гора Соболиная"},
-        {year: "", place: "3 место", site: "Сайт EASY School"},
-        {year: "2018", place: "Лучший сайт образовательного учреждения", site: "Сайт EASY School"}
-    ]
+    const [data, setData] = useState<any>()
+
+    useEffect(() => {
+        getWhoWe()
+    }, []);
+
+    const getWhoWe = async () => {
+        const d = await getWhoWePage()
+        setData(d)
+    }
+
+    //
+    // const achievements = [
+    //     {year: "2020", place: "3 место", site: "Сайт Гора Соболиная"},
+    //     {year: "2019", place: "Лучший сайт гостиницы/отеля", site: "Сайт Гора Соболиная"},
+    //     {year: "", place: "3 место", site: "Сайт EASY School"},
+    //     {year: "2018", place: "Лучший сайт образовательного учреждения", site: "Сайт EASY School"}
+    // ]
 
     return (
         <div className="who-we-page">
@@ -28,18 +41,16 @@ export const WhoWePage: FC<Props> = () => {
                     <div className={"row top"}>
                         <div className={"col text-1"}>
                             <div className={"logo"}>
-                                <img src={"/img/logo-short.svg"} alt={""}/>
+                                <img src={data?.logo_short} alt={""}/>
                             </div>
                             <h6 className={"m-0"}>
-                                Мы диджитал-агентство полного цикла.
-                                Самостоятельно готовим концепцию будущего сайта или сервиса, разрабатываем дизайн и
-                                фирменный стиль, программируем, запускаем проект и не только.
+                                {data?.text_top}
                             </h6>
                         </div>
                         <div className={"col mobile-hide"}>
                             <div className={"true-gif"}>
                                 <div className={"animate-circle"}>
-                                    <img className={""} src={"img/animate/truecode.png"} alt={""}/>
+                                    <img className={""} src={data?.img_live} alt={""}/>
                                 </div>
 
                                 <div className={"img-gauss1"}>
@@ -53,30 +64,25 @@ export const WhoWePage: FC<Props> = () => {
                     <div className={"achievement"}>
                         <div className={"text-achievement"}>
                             <div className={"p1 m-0"}>
-                                Клиенты обращаются к нам за экспертизой и за производственными мощностями. Они просят
-                                помочь в создании нового или серьезной переработке существующего крупного мобильного или
-                                веб-продукта. К нам обращаются, когда нуждаются
-                                в команде, которая переосмыслит проект, ориентируясь на историю взаимодействия
-                                пользователей с ним и на задачах бизнеса. Нас выбирают, когда нужно запустить проект,
-                                объемы которого не под силу основной массе подрядчиков.
-                            </div>
+                                {data?.text_under_top}
+                                </div>
                         </div>
 
                         <div className={"img-3d-wrapper "}>
-                            <img className={"img-ring"} src={"/img/who-we/achievement.png"} alt={"achievement"}/>
+                            <img className={"img-ring"} src={data?.img_rewards} alt={"achievement"}/>
                         </div>
 
                         <h3 className={""}>
-                            Золотой сайт
+                            {data?.header_table_sites}
                         </h3>
 
                         <div className={"table-wrapper"}>
                             <div className={"table-achievements"}>
-                                {achievements && achievements.map(((el) => (
+                                {data?.table_sites && Object.keys(data?.table_sites).map(((key) => (
                                     <div className={"row"}>
-                                        <div className={"col-sm-auto col-12 year"}>{el.year}</div>
-                                        <div className={"col-sm-auto col-12 place"}> {el.place}</div>
-                                        <div className={"col-sm col-12 site"}>{el.site}</div>
+                                        <div className={"col-sm-auto col-12 year"}>{data.table_sites[key].year}</div>
+                                        <div className={"col-sm-auto col-12 place"}> {data.table_sites[key].place}</div>
+                                        <div className={"col-sm col-12 site"}>{data.table_sites[key].site_name}</div>
                                     </div>
                                 )))}
                             </div>
@@ -86,20 +92,20 @@ export const WhoWePage: FC<Props> = () => {
                     {/* projects*/}
                     <div className={"projects"}>
                         <div className={"img-3d-wrapper "}>
-                            <img className={"img-ring"} src={"/img/who-we/keis.png"} alt={"projects"}/>
+                            <img className={"img-ring"} src={data?.img_projects} alt={"projects"}/>
                         </div>
 
-                        <ProjectCards/>
+                        <ProjectCards cardsProjects={data?.cards_projects} buttonName={data?.cards_projects_btn}/>
 
                         {/* video*/}
                         <div className={"video-wrapper"}>
                             <div className={"video"}>
-                                <img className={"img-resizable"} src={"img/who-we/projects/img_3.png"} alt={"video"}/>
+                                <img className={"img-resizable"} src={data?.video.img_cover} alt={"video"}/>
                                 <div className={"text-video"}>
-                                    showreel
+                                    {data?.video.title}
                                 </div>
                                 <div className={"play"}>
-                                    <img className={"img-resizable"} src={"img/who-we/projects/play.png"} alt={"play"}/>
+                                    <img className={"img-resizable"} src={data?.video?.img_button} alt={"play"}/>
                                 </div>
                             </div>
                         </div>
@@ -108,50 +114,48 @@ export const WhoWePage: FC<Props> = () => {
                     {/* team*/}
                     <div className={"team"}>
                         <div className={"img-3d-wrapper"}>
-                            <img className={"img-ring"} src={"/img/who-we/team.png"} alt={"projects"}/>
+                            <img className={"img-ring"} src={data?.img_teams} alt={"projects"}/>
                         </div>
                         <div className={"d-flex justify-content-center"}>
                             <div className={"h6-p1 m-0"}>
-                                Когда-то true.code состоял из маленькой команды друзей и единомышленников. Сегодня в
-                                true.code работает 21 человек, но это все равно друзья и единомышленники или типа того,
-                                как-то красиво надо будет написать.
+                                {data?.text_team}
                             </div>
                         </div>
                         <div>
-                            <TeamCards/>
+                            <TeamCards teamCards={data?.cards_team}/>
                         </div>
                     </div>
 
                     {/* team photo */}
                     <div className={"team-photo"}>
                         <div className={"header"}>
-                            Фото команды
+                            {data?.header_cards_team_large}
                         </div>
-                        <TeamPhotoCards/>
+                        <TeamPhotoCards teamCardsLarge={data?.cards_team_large}/>
                     </div>
 
                     {/*events*/}
                     <div className={"team-events"}>
                         <div className={"img-3d-wrapper"}>
-                            <img className={"img-ring"} src={"/img/who-we/events.png"} alt={"projects"}/>
+                            <img className={"img-ring"} src={data?.img_events} alt={"projects"}/>
                         </div>
-                        <EventsCards/>
+                        <EventsCards cardsEvents={data?.cards_events}/>
                     </div>
 
                     <div className={"who-we-footer"}>
-                        <h3>Присоединяйся!</h3>
+                        <h3>{data?.header_bottom}</h3>
                         <div className={"text"}>
                             <h6>
-                                Добро пожаловать к нам на
-                                <a className={"link-decoration"}
-                                   href={"https://t-code.ru"}> сайт</a>
+                                {data?.text_bottom}
+                                {/*<a className={"link-decoration"}*/}
+                                {/*   href={"https://t-code.ru"}> сайт</a>*/}
                             </h6>
                         </div>
 
                         <div className={"row contacts-wrapper justify-content-center"}>
                             <div className={"col-sm-auto col-12 d-flex align-items-center justify-content-center"}>
-                                <a className={"phone "} href={"tel:+73952261260"}>
-                                    <div className={"p4"}>+7 (3952) 26-12-60</div>
+                                <a className={"phone "} href={`tel:${data?.phone?.phone_link}`}>
+                                    <div className={"p4"}>{data?.phone?.number}</div>
                                 </a>
                             </div>
                             <div className={"col-sm-auto col-12"}>

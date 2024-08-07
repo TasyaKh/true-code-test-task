@@ -3,27 +3,27 @@ import './TeamPhotoCards.scss';
 import Carousel from "../../../components/elements/Carousel/Carousel";
 
 interface Props {
-
+    teamCardsLarge:any
 }
 
-export const TeamPhotoCards: FC<Props> = () => {
+export const TeamPhotoCards: FC<Props> = ({teamCardsLarge}) => {
 
-    const cards = [
-        {id: 1, src: "img/who-we/team/img_4.png"},
-        {id: 2, src: "img/who-we/team/img_5.jpg"},
-        // {id: 1, src: "img/who-we/team/img.png"},
-        // {id: 2, src: "img/who-we/team/img_5.jpg"},
-    ]
+    // const cards = [
+    //     {id: 1, src: "img/who-we/team/img_4.png"},
+    //     {id: 2, src: "img/who-we/team/img_5.jpg"},
+    //     // {id: 1, src: "img/who-we/team/img.png"},
+    //     // {id: 2, src: "img/who-we/team/img_5.jpg"},
+    // ]
 
     return (
         <div className={"team-photo-cards"}>
             <div className={"cards-wrapper"}>
                 <Carousel show={1} persentScroll={50}>
-                    {cards && cards.map((el) => (
+                    {teamCardsLarge && Object.keys(teamCardsLarge).map((key) => (
 
                         <div className={"team-p-card"}>
                             <div className={"card-img"}>
-                                <img src={el.src} className={"img-resizable"} alt={""}/>
+                                <img src={teamCardsLarge[key].img} className={"img-resizable"} alt={""}/>
                             </div>
                         </div>
                     ))}

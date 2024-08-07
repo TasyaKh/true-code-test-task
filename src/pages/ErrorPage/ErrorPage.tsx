@@ -1,13 +1,25 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import './ErrorPage.scss';
 import {Navbar} from "../../components/Navbar/Navbar";
 import {Footer} from "../../components/Footer/Footer";
 import {Link} from "react-router-dom";
+import {getErrorPage, getWhoWePage} from "../../api/pages";
 
 interface Props {
 }
 
 export const ErrorPage: FC<Props> = () => {
+
+    const [data, setData] = useState<any>()
+
+    useEffect(() => {
+        getErrPage()
+    }, []);
+
+    const getErrPage = async () => {
+        const d = await getErrorPage()
+        setData(d)
+    }
 
     return (
         <div className="error-page">
@@ -16,14 +28,14 @@ export const ErrorPage: FC<Props> = () => {
                 <div className="content">
                     <div className={"container"}>
                         <div className={"header-number"}>
-                            404
+                            {data?.err_code}
                         </div>
                         <div className={"header-text"}>
-                            Упс! Что-то пошло не так
+                            {data?.text}
                         </div>
                         <div className={"d-flex justify-content-center"}>
                             <Link to={"/"}>
-                                <button className={"btn light"}> Вернуться на главную страницу</button>
+                                <button className={"btn light"}> {data?.btn_back}   </button>
                             </Link>
                         </div>
                     </div>
