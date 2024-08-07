@@ -10,12 +10,12 @@ interface Props {
 export const Card: FC<Props> = ({
                                     imgSrc,
                                     title,
-                                    footerChild
+                                    footerChild,
                                 }) => {
 
 
     return (
-        <div className={"card-template p-3"}>
+        <div className={"card-template p-3"} >
             <div className={"row"} >
                 <div className={"col-auto"}>
                     <div className={"card"}>

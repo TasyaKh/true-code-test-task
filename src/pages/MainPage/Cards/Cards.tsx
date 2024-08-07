@@ -22,7 +22,7 @@ export const Cards: FC<Props> = ({cards}) => {
         if (cards) {
             const c = Object.keys(cards).map((key) => (
                 <div className={"col-auto"}>
-                    <Card footerChild={cardFooter(cards[key].link)} title={cards[key].title} imgSrc={cards[key]?.img}/>
+                    <Card footerChild={cardFooter(cards[key].vacancy_key)} title={cards[key].title} imgSrc={cards[key]?.img}/>
                 </div>
             ))
             setCardsElems(c)
@@ -33,7 +33,7 @@ export const Cards: FC<Props> = ({cards}) => {
     const cardFooter = (link: string) => (
         <div className={"row buttons"}>
             <div className={"col"}>
-                <Link to={link}>
+                <Link to={`vacancy?key=${link}`}>
                     <button className={"btn light"}>Подробнее</button>
                 </Link>
             </div>

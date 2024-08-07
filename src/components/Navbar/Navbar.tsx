@@ -54,7 +54,7 @@ export const Navbar: FC<Props> = () => {
                 </div>
                 <input type="checkbox" id="collapse"/>
                 <div className="collapsible">
-                    <div className={"row"}>
+                    <div className={"row justify-content-center"}>
                         {/*logo*/}
                         <div className={"d-none d-lg-block col-auto logo-wrapper"} style={{paddingRight: "125px"}}>
                             <Link to={"/"}>
@@ -65,7 +65,7 @@ export const Navbar: FC<Props> = () => {
                         <div className={"d-none d-lg-flex col-auto d-flex align-items-center phone-number"}>
                             +7 (3952) 26-12-60
                         </div>
-                        <div className={"col-auto d-flex align-items-center"} >
+                        <div className={"col-auto d-flex align-items-center justify-content-center"} >
                             <div className={"row menu-wrapper"}>
                                 {menu && menu.map((el) =>
                                     <div className={"col-12 col-lg-auto p-0 d-flex justify-content-center"}>
@@ -103,7 +103,7 @@ export const Navbar: FC<Props> = () => {
                             </div>
 
                         </div>
-                        <div className={"col d-flex justify-content-center align-items-center"}>
+                        <div className={"col-12 col-lg d-flex justify-content-center align-items-center"}>
                             <button className={"btn light btn-send-request"}>Подать заявку</button>
                         </div>
                         <div className={"contacts-mobile row d-lg-none d-flex"}>

@@ -165,6 +165,15 @@ h4 {
 
 }
 
+// extra laarge
+@media (min-width: $pc-breakpoint + 200px) {
+  .container {
+    margin: 0 auto !important;
+    max-width: $pc-breakpoint + 100px;
+  }
+
+}
+
 // phone
 @media (max-width: $mobile-breakpoint) {
 

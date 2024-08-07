@@ -9,12 +9,13 @@ import {Vacancy2} from "./pages/Vacancies/Vacancy2";
 import {Vacancy3} from "./pages/Vacancies/Vacancy3";
 import {WhoWePage} from "./pages/WhoWePage/WhoWePage";
 import {ReviewsPage} from "./pages/ReviewsPage/ReviewsPage";
+import {Vacancy} from "./pages/Vacancies/Vacancy";
+import {VacancyWrapper} from "./pages/MainPage/VacancyWrapper";
 
 
 export const useRoutes = () => {
     return (
         <Switch>
-
             <Route exact path="/">
                 <Vacancies/>
             </Route>
@@ -36,15 +37,7 @@ export const useRoutes = () => {
             </Route>
 
             {/*vacancies */}
-            <Route  path="/vacancy-1">
-                <Vacancy1/>
-            </Route>
-            <Route  path="/vacancy-2">
-                <Vacancy2/>
-            </Route>
-            <Route  path="/vacancy-3">
-                <Vacancy3/>
-            </Route>
+            <Route path="/vacancy" component={VacancyWrapper} />
 
             <Route path="*">
                 <ErrorPage/>

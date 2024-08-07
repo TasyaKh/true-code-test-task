@@ -6,17 +6,18 @@ interface Props {
     vacancy: any
 }
 
-export const Vacancy2: FC<Props> = ({vacancy}) => {
+export const Vacancy: FC<Props> = ({vacancy}) => {
 
     const child = (
-        <div className={"vacancy2"}>
+        <div className={"vacancy"}>
             <div className={"row"}>
-                <div className={"col-auto "}>
+                <div className={"col-auto"}>
                     <div className={"text"}>
                         <h4 className={"subtitle"}>
                             {vacancy?.subheader}
                         </h4>
                         <p className={"p1"} dangerouslySetInnerHTML={{__html: vacancy?.text}}>
+
                         </p>
                         <div className={"btn-wrapper"}>
                             <button className={"btn light"}>
@@ -25,7 +26,7 @@ export const Vacancy2: FC<Props> = ({vacancy}) => {
                         </div>
                     </div>
                 </div>
-                <div className={"col d-flex mobile-hide"} style={{maxHeight: "147px"}}>
+                <div className={"col d-flex mobile-hide"}>
                     <img src={vacancy?.img} alt={""}/>
                 </div>
             </div>

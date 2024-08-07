@@ -6,6 +6,11 @@
     //margin-top: 35px;
   }
 
+  .cards-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+
   @media (max-width: $mobile-breakpoint) {
     margin: 35px 0;
 

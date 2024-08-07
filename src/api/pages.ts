@@ -32,6 +32,11 @@ export const getErrorPage= async () => {
     return getContentBySlug("errorpage")
 };
 
+export const getAllVacancies= async () => {
+    return getContentBySlug("all-vacancies")
+};
+
+
 
 // components
 export const getFooterContent = async () => {
