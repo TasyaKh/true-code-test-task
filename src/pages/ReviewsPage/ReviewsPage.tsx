@@ -4,7 +4,7 @@ import {Navbar} from "../../components/Navbar/Navbar";
 import {Footer} from "../../components/Footer/Footer";
 import {Comment} from "./Comment/Comment";
 import {getReviewsPage,} from "../../api/pages";
-import {ExpandableElem} from "../../components/ExpandableElem/ExpandableElem";
+import {ExpandableElem} from "../../components/elements/ExpandableElem/ExpandableElem";
 
 interface Props {
 }
@@ -12,16 +12,37 @@ interface Props {
 export const ReviewsPage: FC<Props> = () => {
 
     const [data, setData] = useState<any>()
+    const [commentsCards, setCommentsCards] = useState<React.ReactNode[]>()
 
     useEffect(() => {
         getReviews()
     }, []);
+
 
     const getReviews = async () => {
         const d = await getReviewsPage()
         setData(d)
     }
 
+    useEffect(() => {
+        getCommentsElements()
+    }, [data?.comments]);
+
+    const getCommentsElements = () => {
+
+        if(data?.comments){
+            const c =  Object.keys(data?.comments).map((key, index) => (
+                <div className={`col-12`} id={`elem-${index}`}>
+                    <Comment text={data.comments[key].text} author={data.comments[key].author_name}
+                             avatar={data.comments[key].avatar}
+                             isAuthorLeftSide={data.comments[key].is_author_left_side}
+                    />
+                </div>
+            ))
+            setCommentsCards(c)
+        }
+
+    }
 
     return (
         <div className="reviews-page">
@@ -33,18 +54,10 @@ export const ReviewsPage: FC<Props> = () => {
                 </h3>
 
                 <div className={"reviews"}>
-                    <ExpandableElem child={
-                        <div className={"row comments"}>
-                            {data?.comments && Object.keys(data.comments).map((key, index) => (
-                                <div className={`col-12 invisible`} id={`elem-${index}`}>
-                                    <Comment text={data.comments[key].text} author={data.comments[key].author_name}
-                                             avatar={data.comments[key].avatar}
-                                             isAuthorLeftSide={data.comments[key].is_author_left_side}/>
-                                </div>
-                            ))}
-                        </div>
-
-                    } expandCount={2} visibleCount={2}/>
+                    <ExpandableElem childs={
+                       commentsCards ?? []
+                    } expandCount={2} visibleCount={2}
+                    cardsStyle={"comments"}/>
 
                 </div>
             </div>

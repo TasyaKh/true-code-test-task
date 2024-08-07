@@ -5,6 +5,7 @@ import {Navbar} from "../../components/Navbar/Navbar";
 import {Footer} from "../../components/Footer/Footer";
 import {Form} from "../../components/Form/Form";
 import {getMainPageContent} from "../../api/pages";
+import {Comment} from "../ReviewsPage/Comment/Comment";
 
 interface Props {
 }
@@ -21,6 +22,7 @@ export const Vacancies: FC<Props> = () => {
         const d = await getMainPageContent()
         setData(d)
     }
+
 
     return (
         <div className={""}>

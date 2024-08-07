@@ -1,0 +1,27 @@
+@import "../../../scss/vars";
+
+.expandable-elem {
+
+  .invisible{
+    display: none;
+  }
+
+  //.visible{
+  //  display: block;
+  //}
+
+
+  @media (max-width: $mobile-breakpoint) {
+    .button-down{
+      margin-top: 35px;
+    }
+
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+    .button-down{
+      margin-top: 30px;
+    }
+
+  }
+}

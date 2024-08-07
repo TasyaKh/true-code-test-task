@@ -1,21 +1,34 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import './Cards.scss';
 import {Link} from "react-router-dom";
 import {Card} from "../../../components/Card/CardTemplate";
-import {BtnsCards} from "../../../components/elements/buttons/BtnsCards/BtnsCards";
-import {BtnArrowDown} from "../../../components/elements/buttons/BtnArrowDown/BtnArrowDown";
+import {CarouselBasic} from "../../../components/elements/CarouselBasic/CarouselBasic";
+import {ExpandableElem} from "../../../components/elements/ExpandableElem/ExpandableElem";
 
 interface Props {
     cards: any
 }
 
 export const Cards: FC<Props> = ({cards}) => {
+    const [cardsElems, setCardsElems] = useState<React.ReactNode[]>()
 
-    // const cards = [
-    //     {id: 1, src: "img/main-page/design.png", name: "Веб-дизайнер", link: "/vacancy-1"},
-    //     {id: 2, src: "img/main-page/developer.png", name: "Разработчик", link: "/vacancy-2"},
-    //     {id: 3, src: "img/main-page/manager.png", name: "Менеджер проектов", link: "/vacancy-3"},
-    // ]
+    useEffect(() => {
+        getCommentsElements()
+    }, [cards]);
+
+
+    const getCommentsElements = () => {
+
+        if (cards) {
+            const c = Object.keys(cards).map((key) => (
+                <div className={"col-auto"}>
+                    <Card footerChild={cardFooter(cards[key].link)} title={cards[key].title} imgSrc={cards[key]?.img}/>
+                </div>
+            ))
+            setCardsElems(c)
+        }
+
+    }
 
     const cardFooter = (link: string) => (
         <div className={"row buttons"}>
@@ -32,36 +45,12 @@ export const Cards: FC<Props> = ({cards}) => {
 
     return (
         <div className={"cards"}>
-            {/*<Carousel show={3} persentScroll={100}>*/}
-            {/*    /!*<div className={"row cards-wrapper justify-content-center"}>*!/*/}
-            {/*    {cards && cards.map((el) => (*/}
-            {/*        // <div className={"col-auto"}>*/}
-            {/*        <Card footerChild={cardFooter(el.link)} title={el.name} imgSrc={el.src}/>*/}
-            {/*        // </div>*/}
-            {/*    ))}*/}
-            {/*    /!*</div>*!/*/}
-
-            {/*</Carousel>*/}
-            <div className={"row cards-wrapper justify-content-center"}>
-
-                {cards && Object.keys(cards).map((key) => (
-                    <div className={"col-auto"}>
-                        <Card footerChild={cardFooter(cards[key].link)} title={cards[key].title} imgSrc={cards[key]?.img}/>
-                    </div>
-                ))}
+            <div className={"mobile-hide"}>
+                <CarouselBasic childs={cardsElems ?? []} expandCount={3} visibleCount={3} cardsStyle={"cards-wrapper"}/>
             </div>
-            {/*buttons*/}
-            <div className={"row justify-content-center"}>
-                <div className={"buttons-forward mobile-hide"}>
-                    <BtnsCards onBackClick={() => {
-                    }} onForwardClick={() => {
-                    }}/>
-                </div>
-                <div className={"pc-hide"}>
-                    <div className={" d-flex justify-content-center"}>
-                        <BtnArrowDown/>
-                    </div>
-                </div>
+
+            <div className={"pc-hide"}>
+                <ExpandableElem childs={cardsElems ?? []} expandCount={3} visibleCount={3} cardsStyle={"cards-wrapper"}/>
             </div>
         </div>
     )

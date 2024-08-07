@@ -1,15 +1,6 @@
-@import "src/scss/vars";
+@import "../../../scss/vars";
 
-.expandable-elem {
-
-  .invisible{
-    display: none;
-  }
-
-  //.visible{
-  //  display: block;
-  //}
-
+.carousel-basic{
 
   @media (max-width: $mobile-breakpoint) {
     .button-down{

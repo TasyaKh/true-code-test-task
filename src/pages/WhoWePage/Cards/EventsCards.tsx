@@ -9,13 +9,6 @@ interface Props {
 
 export const EventsCards: FC<Props> = ({cardsEvents}) => {
 
-    // const cards = [
-    //     {id: 1, src: "img/who-we/events/img.png", name: "Новый Год"},
-    //     {id: 2, src: "img/who-we/events/img_1.png", name: "8 Марта"},
-    //     {id: 3, src: "img/who-we/events/img_2.png", name: "23 Февраля"},
-    //     {id: 4, src: "img/who-we/events/img_3.png", name: "Корпоратив"},
-    // ]
-
     return (
         <div className={"event-cards"}>
             <div className={"row cards-wrapper justify-content-center"}>

@@ -12,12 +12,6 @@ interface Props {
 
 export const ProjectCards: FC<Props> = ({cardsProjects, buttonName}) => {
 
-    // const cards = [
-    //     {id: 1, src: "img/who-we/projects/img.png", name: "Гранд Байкал", link: ""},
-    //     {id: 2, src: "img/who-we/projects/img_1.png", name: "Гора Соболиная", link: ""},
-    //     {id: 3, src: "img/who-we/projects/img_2.png", name: "Мой Бизнес", link: ""},
-    // ]
-
     const cardFooter = (link: string) => (
         <div className={"d-flex justify-content-center"}>
             <Link to={link}>
@@ -53,6 +47,5 @@ export const ProjectCards: FC<Props> = ({cardsProjects, buttonName}) => {
             </div>
         </div>
     )
-
 };
 
