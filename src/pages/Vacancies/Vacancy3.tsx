@@ -7,7 +7,6 @@ interface Props {
     vacancy: any
 }
 
-
 export const Vacancy3: FC<Props> = ({vacancy}) => {
 
     const child = (

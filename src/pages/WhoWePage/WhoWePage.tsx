@@ -24,13 +24,6 @@ export const WhoWePage: FC<Props> = () => {
         setData(d)
     }
 
-    //
-    // const achievements = [
-    //     {year: "2020", place: "3 место", site: "Сайт Гора Соболиная"},
-    //     {year: "2019", place: "Лучший сайт гостиницы/отеля", site: "Сайт Гора Соболиная"},
-    //     {year: "", place: "3 место", site: "Сайт EASY School"},
-    //     {year: "2018", place: "Лучший сайт образовательного учреждения", site: "Сайт EASY School"}
-    // ]
     const [playVideo, setPlayVideo] = useState(false)
 
     const onPlay = (play: boolean) => {
@@ -106,7 +99,7 @@ export const WhoWePage: FC<Props> = () => {
                         <div className={"video-wrapper"}>
                             <div className={"video"}>
                                 {!playVideo ? <div className={""} style={{width:"100%", height:"100%"}}>
-                                    <img className={"img-resizable"} src={data?.video.img_cover} alt={"video"}/>
+                                    <img className={"img-resizable"} src={data?.video.img_cover} alt={"video"} style={{opacity:0.5}}/>
                                     <div className={"text-video"}>
                                         {data?.video.title}
                                     </div>

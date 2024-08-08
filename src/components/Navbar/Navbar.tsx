@@ -103,7 +103,7 @@ export const Navbar: FC<Props> = () => {
                                                             <div
                                                                 className={"col-12 col-lg-auto p-0 d-flex justify-content-center " +
                                                                     ""}>
-                                                                <Link to={`vacancy?key=${key2}`}>
+                                                                <Link to={`/vacancy?key=${key2}`}>
                                                                     <div
                                                                         className={"sub-link link"}> {data?.vacancies[key2]?.header}</div>
                                                                 </Link>

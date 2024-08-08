@@ -118,130 +118,134 @@
     background-color: var(--bg-1);
     outline: $border;
   }
-}
-
-.text-or {
-  margin-top: 25px;
-  margin-bottom: 15px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
 
 
-@media (max-width: $mobile-breakpoint) {
 
-  .border-wrapper {
+  .text-or {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
 
-    &:after {
-      left: 5px;
-      bottom: -8px;
+
+  @media (max-width: $mobile-breakpoint) {
+
+    .border-wrapper {
+
+      &:after {
+        left: 5px;
+        bottom: -8px;
+      }
+    }
+
+    .btn-wrapper{
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about{
+      margin-top: 25px;
+      margin-bottom: 20px;
+    }
+
+    .check{
+      //margin-top: 20px;
+      //margin-bottom: 30px;
+
+      //styleName: P3 Text Mobile;
+      font-family: Panton;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 15.6px;
+
+    }
+
+
+    .wrapper1 {
+      gap: 49px;
+    }
+
+
+    .form-wrapper {
+      margin:  45px 28px 34px 28px;
+    }
+
+    .form-border{
+      width: 100%;
     }
   }
 
-  .btn-wrapper{
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-  }
+  @media (min-width: $mobile-breakpoint) {
 
-  .about{
-    margin-top: 25px;
-    margin-bottom: 20px;
-  }
+    .wrapper-label{
+      width: 342px !important;
+    }
 
-  .check{
-    //margin-top: 20px;
-    //margin-bottom: 30px;
+    .checkbox-label{
+      //styleName: P3;
+      font-family: Panton Light;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 14.48px;
 
-    //styleName: P3 Text Mobile;
-    font-family: Panton;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 15.6px;
+    }
 
-  }
+    .about{
+      margin-bottom: 22px;
+    }
 
+    .file{
+      margin-bottom: 43px;
+    }
 
-  .wrapper1 {
-    gap: 49px;
-  }
+    .text-or {
+      margin-top: 20px;
+      margin-bottom: 6px;
+    }
 
+    .name{
+      margin-bottom: 61px;
+    }
 
-  .form-wrapper {
-    margin:  45px 28px 34px 28px;
-  }
+    .tel{
+      margin-bottom: 55px;
+    }
 
-  .form-border{
-    width: 100%;
-  }
-}
+    .direction{
+      margin-bottom: 51px;
+    }
 
-@media (min-width: $mobile-breakpoint) {
+    .border-wrapper {
 
-  .wrapper-label{
-    width: 342px !important;
-  }
-
-  .checkbox-label{
-    //styleName: P3;
-    font-family: Panton Light;
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 14.48px;
-
-  }
-
-  .about{
-    margin-bottom: 22px;
-  }
-
-  .file{
-    margin-bottom: 43px;
-  }
-
-  .text-or {
-    margin-top: 20px;
-    margin-bottom: 6px;
-  }
-
-  .name{
-    margin-bottom: 61px;
-  }
-
-  .tel{
-    margin-bottom: 55px;
-  }
-
-  .direction{
-    margin-bottom: 51px;
-  }
-
-  .border-wrapper {
-
-    &:after {
-      left: 5px;
-      bottom: -1px;    }
-  }
+      &:after {
+        left: 5px;
+        bottom: -1px;    }
+    }
 
 
-  .btn-wrapper{
-    margin-top: 37px;
-    display: flex;
-    justify-content: center;
-  }
+    .btn-wrapper{
+      margin-top: 37px;
+      display: flex;
+      justify-content: center;
+    }
 
-  .wrapper1 {
-    //gap: 51px
-  }
+    .wrapper1 {
+      //gap: 51px
+    }
 
-  .form-wrapper {
-    margin: 55px 45px 45px 40px;
-    //width: 40%;
-  }
+    .form-wrapper {
+      margin: 55px 45px 45px 40px;
+      //width: 40%;
+    }
 
-  .form-border{
-    width: 593px;
+    .form-border{
+      width: 593px;
+    }
+
   }
 
 }
+
