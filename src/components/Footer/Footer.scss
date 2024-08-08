@@ -13,11 +13,13 @@
     outline: $border;
     border-radius: $radius-30 $radius-30 0 0;
 
-    //className={"d-flex align-content-end"}
-    //style={{padding: "0 71px", height: "100%"}}
-
     @media (max-width: $mobile-breakpoint) {
       margin: 0;
+
+      .btn-footer {
+        //padding: 13px 32px;
+        border-radius: 10px;
+      }
 
       .icons-wrapper{
         gap:20px
@@ -28,6 +30,7 @@
       }
 
       .footer-content-wrapper {
+        justify-content: center;
         gap: 35px;
         margin-bottom: 36px;
 
@@ -85,6 +88,14 @@
         button {
           width: 197px;
           height: 56px;
+
+          //styleName: P4;
+          font-family: Panton SemiBold;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 21.87px;
+          text-align: center;
+
         }
 
         .footer-icon {

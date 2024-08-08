@@ -47,5 +47,9 @@ export const getHeaderContent = async () => {
     return getContentBySlug("header")
 };
 
+export const getFormContent= async () => {
+    return getContentBySlug("formpage")
+};
+
 
 

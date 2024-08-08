@@ -36,7 +36,7 @@ export const Vacancies: FC<Props> = () => {
                             <h6>{data?.subheader}</h6>
                         </div>
 
-                        <div className={"col-auto mobile-hide "} style={{marginRight: "112px"}}>
+                        <div className={"col-auto mobile-hide "} style={{marginRight: "112px", zIndex:-1}}>
                             <img src={data?.img_top} className={"img-resizable"}
                                  style={{width: "363px", height: "406px", transform: "translate(0px, -37px)"}}
                                  alt={""}/>
@@ -55,7 +55,7 @@ export const Vacancies: FC<Props> = () => {
                     <div className={"flex-column d-flex align-items-center"}>
                         {/* cards section */}
                         <div className={""}>
-                            <Cards cards={data?.cards}/>
+                            <Cards cards={data?.cards} data={data}/>
                         </div>
 
                         <div className={"pc-hide img-above-form"}>

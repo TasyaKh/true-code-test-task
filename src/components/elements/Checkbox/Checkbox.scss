@@ -2,7 +2,7 @@
 
 .checkbox {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   /* Hide the default checkbox */
   .custom-checkbox input[type="checkbox"] {
@@ -10,7 +10,9 @@
 
   }
 
+  .wrapper-label{
 
+  }
 
   /* Style the custom checkbox */
   .custom-checkbox .checkbox-image {

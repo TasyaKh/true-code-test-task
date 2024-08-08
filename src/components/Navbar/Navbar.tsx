@@ -2,7 +2,7 @@ import React, {FC, useEffect, useState} from "react";
 import "./Navbar.scss"
 import {Link} from "react-router-dom";
 import {Dropdown} from "../elements/Dropdown";
-import {getFooterContent, getHeaderContent} from "../../api/pages";
+import {getHeaderContent} from "../../api/pages";
 
 interface Props {
 
@@ -30,7 +30,7 @@ export const Navbar: FC<Props> = () => {
     const menu = [
         {id: 1, name: "Вакансии", redirect: "/", dropdown: dropdownVacancy},
         {id: 2, name: "Кто мы?", redirect: "/who-we", dropdown: null},
-        {id: 3, name: "Что предлагаем?", redirect: "/we-offers", dropdown: null},
+        {id: 3, name: "Что мы предлагаем?", redirect: "/we-offers", dropdown: null},
         {id: 4, name: "Отзывы", redirect: "reviews", dropdown: null},
         {id: 4, name: "Правила", redirect: "/rules", dropdown: null},
     ]
@@ -40,9 +40,11 @@ export const Navbar: FC<Props> = () => {
             <nav className={"navbar"}>
                 <div className={"row"}>
                     <div className={"d-lg-none col"} style={{marginBottom: "23px"}}>
-                        <Link to={"/"}>
-                            <img src={"/img/logo-full.png"} style={{width: "174px", height: "56px"}}
-                                 alt={"logo"}/>
+                        <Link to={"/"} className={""}>
+                            <div className={"logo-header "}>
+                                <img src={"/img/logo-full.png"} className={"img-contain"}
+                                     alt={"logo"}/>
+                            </div>
                         </Link>
                     </div>
                     <div className={"col-auto"}>
@@ -54,25 +56,24 @@ export const Navbar: FC<Props> = () => {
 
                 <div className={"d-lg-none row"}>
                     <div className={"col"}>
-                        <div className={"col-auto"}>
-                            <div className={" phone-number"} style={{marginBottom: "12px"}}>
+                        <div className={"col-auto contacts"}>
+                            <div className={" phone-number phone-top"}>
                                 <a className={"phone "} href={`tel:${data?.phone?.number_link}`}>
                                     {data?.phone?.number}
                                 </a>
                             </div>
-
-                            <a className={""}>support@t-code.ru</a>
+                            <a className={""} href={`mailto:${data?.mail}`}>{data?.mail}</a>
                         </div>
                     </div>
                     <div className={"col-auto d-flex justify-content-center"}>
                         <Link to={"/form"}>
-                            <button className={"btn light btn-send-request"}>Подать заявку</button>
+                            <button className={"btn light btn-send-request"}>{data?.button_request}</button>
                         </Link>
                     </div>
                 </div>
                 <input type="checkbox" id="collapse"/>
                 <div className="collapsible">
-                    <div className={"row justify-content-center"}>
+                    <div className={"row collapsible-wrapper"}>
                         {/*logo*/}
                         <div className={"d-none d-lg-block col-auto logo-wrapper"} style={{paddingRight: "125px"}}>
                             <Link to={"/"}>
@@ -127,7 +128,7 @@ export const Navbar: FC<Props> = () => {
                         </div>
                         <div className={"col-12 col-lg d-flex justify-content-center align-items-center"}>
                             <Link to={"/form"}>
-                                <button className={"btn light btn-send-request"}>Подать заявку</button>
+                                <button className={"btn light btn-send-request"}>{data?.button_request}</button>
                             </Link>
                         </div>
                         <div className={"contacts-mobile row d-lg-none d-flex"}>
@@ -138,7 +139,7 @@ export const Navbar: FC<Props> = () => {
                                 </a>
                             </div>
 
-                        <div className={"col-12 d-flex justify-content-center "}
+                            <div className={"col-12 d-flex justify-content-center "}
                                  style={{gap: "11.7px"}}>
                                 <div className={"navbar-icon icon-vk"}></div>
                                 <div className={"navbar-icon icon-facebook"}></div>

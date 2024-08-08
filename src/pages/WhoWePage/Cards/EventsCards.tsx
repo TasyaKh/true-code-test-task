@@ -1,10 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 import './EventsCards.scss';
-import {BtnsCards} from "../../../components/elements/buttons/BtnsCards/BtnsCards";
-import {BtnArrowDown} from "../../../components/elements/buttons/BtnArrowDown/BtnArrowDown";
 import {CarouselBasic} from "../../../components/elements/CarouselBasic/CarouselBasic";
 import {ExpandableElem} from "../../../components/elements/ExpandableElem/ExpandableElem";
-import {Card} from "../../../components/Card/CardTemplate";
 
 interface Props {
     cardsEvents:any

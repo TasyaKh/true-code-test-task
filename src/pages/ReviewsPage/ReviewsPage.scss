@@ -27,6 +27,10 @@
     height: 463px;
   }
 
+  p{
+    margin-bottom: 0;
+  }
+
   .img-experience{
     position: absolute;
     top: 611px;
@@ -41,8 +45,13 @@
   }
 
   @media (min-width: $mobile-breakpoint) {
+
+    h3{
+      margin-top: 0;;
+    }
     .reviews-wrapper{
       margin-bottom: 80px;
+      margin-top: 42px;
     }
     .comments{
       gap: 35px;
@@ -50,6 +59,11 @@
   }
 
   @media (max-width: $mobile-breakpoint) {
+
+    h3{
+      margin: 35px 0 26px 0;
+    }
+
     .reviews-wrapper{
       margin-bottom: 35px;
     }

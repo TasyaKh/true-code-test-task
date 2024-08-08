@@ -1,7 +1,7 @@
 import {FC, useEffect, useState} from "react";
 import "./Footer.scss"
 import {Link} from "react-router-dom";
-import {getFooterContent, getMainPageContent} from "../../api/pages";
+import {getFooterContent,} from "../../api/pages";
 
 interface Props {
 
@@ -20,11 +20,10 @@ export const Footer: FC<Props> = () => {
         setData(d)
     }
 
-
     return (
         <div className={"footer"}>
             <div className={"footer-wrapper"}>
-                <div className={"row footer-content-wrapper"}>
+                <div className={"row footer-content-wrapper "}>
                     {/*logo*/}
                     <div className={"col-sm-auto col-12 justify-content-center justify-content-sm-start d-flex"}>
                         <div className={"logo-wrapper"}>
@@ -45,13 +44,19 @@ export const Footer: FC<Props> = () => {
                             <div
                                 className={"col-12 d-flex icons-wrapper justify-content-sm-end justify-content-center"}>
                                 <a href={data?.socials?.vk?.link}>
-                                    <div className={"footer-icon icon-vk"}></div>
+                                    <div className={"icon-rounded"}>
+                                        <div className={"footer-icon icon-vk"}></div>
+                                    </div>
                                 </a>
                                 <a href={data?.socials?.facebook?.link}>
-                                    <div className={"footer-icon icon-facebook"}></div>
+                                    <div className={"icon-rounded"}>
+                                        <div className={"footer-icon icon-facebook"}></div>
+                                    </div>
                                 </a>
                                 <a href={data?.socials?.instagram?.link}>
-                                    <div className={"footer-icon icon-instagram"}></div>
+                                    <div className={"icon-rounded"}>
+                                        <div className={"footer-icon icon-instagram"}></div>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -59,7 +64,7 @@ export const Footer: FC<Props> = () => {
                     <div
                         className={"col-sm-auto col-12 d-flex justify-content-sm-end justify-content-center btn-footer"}>
                         <Link to={"/form"}>
-                            <button className={"mx-4 m-md-0 btn light"}>Подать заявку</button>
+                            <button className={"m-md-0 btn light btn-footer"}>Подать заявку</button>
                         </Link>
                     </div>
                     <div className={"col-sm-auto col-12 d-flex justify-content-center"}>

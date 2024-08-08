@@ -25,7 +25,7 @@ export const ErrorPage: FC<Props> = () => {
         <div className="error-page">
             <div className={"container-full"}>
                 <Navbar/>
-                <div className="content">
+                <div className="content error-wrapper">
                     <div className={"container"}>
                         <div className={"header-number"}>
                             {data?.err_code}

@@ -4,6 +4,8 @@
   position: relative;
   overflow: hidden;
 
+
+
   .img-gauss {
     position: absolute;
     top: 24px;
@@ -42,8 +44,6 @@
       max-width: 222px;
       max-height: 248px;
     }
-
-
   }
 
   @media (min-width: $mobile-breakpoint) {

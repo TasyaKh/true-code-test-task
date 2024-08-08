@@ -1,5 +1,5 @@
 import React, {FC, useEffect, useState} from 'react';
-import './ErrorPage.scss';
+import './FormPage.scss';
 import {Form} from "../../components/Form/Form";
 import {getMainPageContent} from "../../api/pages";
 import {Footer} from "../../components/Footer/Footer";

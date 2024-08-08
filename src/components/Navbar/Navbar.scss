@@ -1,30 +1,59 @@
 @import "scss/vars";
 
 .navbar {
-  padding-top: 25px;
   width: 100%;
   height: 100%;
   font-family: Panton-SemiBold, serif;
   font-weight: 600;
 
-  .navbar-icon{
+  .navbar-icon {
     width: 28px;
     height: 28px;
   }
 
+  .link{
+    font-family: Panton SemiBold;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.01px;
+    text-align: left;
+
+  }
+
+  .contacts{
+    a {
+      font-family: Panton Light;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 21px;
+      letter-spacing: 0.03em;
+      text-align: left;
+    }
+  }
+
   .phone-number {
-    font-size: 16px;
+    font-family: Panton-SemiBold, serif;
   }
 
-  .sub-menu-wrapper{
-    gap: 15px;
-    margin-top: 15px;
+  .sub-menu-wrapper {
+    gap: 10px;
+    margin-top: 10px;
   }
 
-  .contacts-mobile{
-    margin-top: 114px;
+  .contacts-mobile {
 
-    .phone-number{
+    a{
+      margin-top: 114px;
+      //styleName: P1 Text Mobile;
+      font-family: Panton;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.2px;
+      text-align: center;
+    }
+
+
+    .phone-number {
       margin-bottom: 15px;
     }
   }
@@ -39,21 +68,43 @@
   }
 
 
-    @media (max-width: $lg-breakpoint) {
+  @media (max-width: $lg-breakpoint) {
+    padding-top: 17px;
 
-    .sub-link{
-      font-weight: 400 !important;
-      font-size: 13px !important;
+    .collapsible-wrapper{
+      justify-content: center;
     }
 
     .link{
-      font-weight: 600;
+      //styleName: P1 Text Mobile;
+      font-family: Panton;
       font-size: 16px;
+      font-weight: 400;
+      line-height: 19.2px;
+      text-align: center;
+
     }
 
+
+    .logo-header  {
+      width: 115px;
+      height: 37px;
+    }
+
+    .sub-link {
+      //styleName: P3 Text Mobile;
+      font-family: Panton;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 15.6px;
+      text-align: center;
+
+    }
+
+
     .menu-wrapper {
-      gap: 35px;
-      margin-bottom: 35px;
+      gap: 31px;
+      margin-bottom: 31px;
     }
 
     label[for="collapse"] {
@@ -71,22 +122,40 @@
   }
 
   @media (min-width: $lg-breakpoint) {
+    padding-top: 25px;
 
 
-    .link{
+    .phone-number{
+      a{
+        font-family: Panton SemiBold;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.44px;
+        text-align: left;
+      }
+    }
+
+    .phone-top{
+      margin-bottom: 12px;
+    }
+    .logo-header {
+      width: 174px;
+      height: 56px;
+    }
+    .link {
       font-weight: 600;
       font-size: 14px;
     }
 
     .menu-wrapper {
       gap: 25px;
-      padding: 0px 82px;
+      padding: 0px 82px 0 79px;
     }
 
     .collapsible {
       display: flex;
 
-      .logo-wrapper{
+      .logo-wrapper {
         max-height: 56px;
       }
     }

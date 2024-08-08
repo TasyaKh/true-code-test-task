@@ -7,9 +7,10 @@ import {ExpandableElem} from "../../../components/elements/ExpandableElem/Expand
 
 interface Props {
     cards: any
+    data: any
 }
 
-export const Cards: FC<Props> = ({cards}) => {
+export const Cards: FC<Props> = ({cards, data}) => {
     const [cardsElems, setCardsElems] = useState<React.ReactNode[]>()
 
     useEffect(() => {
@@ -18,7 +19,6 @@ export const Cards: FC<Props> = ({cards}) => {
 
 
     const getCommentsElements = () => {
-
         if (cards) {
             const c = Object.keys(cards).map((key) => (
                 <div className={"col-auto"}>
@@ -28,20 +28,44 @@ export const Cards: FC<Props> = ({cards}) => {
             ))
             setCardsElems(c)
         }
-
     }
 
+    const btn1 = (link: string) => (
+        <Link to={`vacancy?key=${link}`}>
+            <button className={"btn light"}>{data?.button_more}</button>
+        </Link>
+    )
+
+    const btn2 = () => (
+        <Link to={"/form"}>
+            <button className={"btn dark"}>{data?.button_request}</button>
+        </Link>
+    )
+
+
     const cardFooter = (link: string) => (
-        <div className={"row buttons"}>
-            <div className={"col"}>
-                <Link to={`vacancy?key=${link}`}>
-                    <button className={"btn light"}>Подробнее</button>
-                </Link>
+        <div>
+
+            <div className={"mobile-hide"}>
+                <div className={"row buttons"}>
+                    <div className={"col"}>
+                        {btn1(link)}
+                    </div>
+                    <div className={"col"}>
+                        {btn2()}
+                    </div>
+                </div>
             </div>
-            <div className={"col"}>
-                <Link to={"/form"}>
-                    <button className={"btn dark"}>Подать заявку</button>
-                </Link>
+
+            <div className={"pc-hide"}>
+                <div className={"row buttons"}>
+                    <div className={"col"}>
+                        {btn2()}
+                    </div>
+                    <div className={"col"}>
+                        {btn1(link)}
+                    </div>
+                </div>
             </div>
         </div>
     )

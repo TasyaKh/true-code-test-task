@@ -2,7 +2,7 @@ import React, {FC, useEffect, useState} from 'react';
 import './RulesPage.scss';
 import {Footer} from "../../components/Footer/Footer";
 import {Navbar} from "../../components/Navbar/Navbar";
-import { getRulesContent} from "../../api/pages";
+import {getRulesContent} from "../../api/pages";
 
 interface Props {
 }
@@ -15,7 +15,7 @@ export const RulesPage: FC<Props> = () => {
         getRules()
     }, []);
 
-    const getRules= async () => {
+    const getRules = async () => {
         const d = await getRulesContent()
         setData(d)
     }
@@ -28,15 +28,16 @@ export const RulesPage: FC<Props> = () => {
                 <h3 style={{textAlign: "center"}}>
                     {data?.header_main}
                 </h3>
-                <p className={"p1"}  dangerouslySetInnerHTML= {{__html: data?.subtext_header}}>
+                <p className={"p1"} style={{maxWidth: "910px"}}
+                   dangerouslySetInnerHTML={{__html: data?.subtext_header}}>
 
                 </p>
 
                 {data?.sections && Object.keys(data?.sections).map((key, index) => (
                     <>
                         <h4> {data?.sections[key]?.header}</h4>
-                        <p className={`p1`}
-                           dangerouslySetInnerHTML= {{__html: data?.sections[key]?.text}}>
+                        <p className={`p1`} style={{maxWidth: "910px"}}
+                           dangerouslySetInnerHTML={{__html: data?.sections[key]?.text}}>
                         </p>
                     </>
                 ))}

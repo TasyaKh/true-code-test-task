@@ -36,14 +36,11 @@ export const CarouselBasic: FC<Props> = ({
                 start = 0
                 end = expandCount
             }
-            // console.log("end", end)
 
             if (end >= childs.length ) {
                 end = childs.length
                 start = end - expandCount
             }
-
-            // console.log("endss ", end)
 
             let elems = []
 

@@ -3,7 +3,7 @@
 .cards {
 
   .buttons-forward {
-    margin-top: 35px;
+    margin-top: 0px;
   }
 
   @media (max-width: $mobile-breakpoint) {
@@ -30,7 +30,7 @@
   }
 
   @media (min-width: $mobile-breakpoint) {
-    margin: 80px 0 0 0;
+    margin: 40px 0 0 0;
 
     .cards-wrapper {
       gap: 35px;

@@ -120,7 +120,6 @@
     .text-video {
       position: absolute;
       font-weight: 700;
-      width: 393px;
       text-align: center;
     }
 
@@ -142,6 +141,9 @@
 
   .who-we-footer {
     text-align: center;
+    h3{
+      text-align: center;
+    }
 
     .text {
       text-align: center;
@@ -150,6 +152,18 @@
 
 
   @media (max-width: $mobile-breakpoint) {
+
+
+    h6 {
+      //styleName: P5 Text Mobile;
+      font-family: Panton Light;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 16.8px;
+      letter-spacing: 0.03em;
+      text-align: left;
+
+    }
 
     .contacts-wrapper {
       gap: 30px;
@@ -176,12 +190,19 @@
     .who-we-footer {
       h3 {
         margin-top: 35px;
-        margin-bottom: 30px;
+        //margin-bottom: 30px;
+        margin-bottom: 0;
+      }
+
+      h6 {
+        margin: 0;
       }
 
       .text {
         margin-top: 30px;
         margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
       }
 
       .phone-number {
@@ -193,8 +214,12 @@
 
     .team-photo {
       .header {
+        //styleName: H1 Header Mobile;
+        font-family: Panton;
+        font-size: 24px;
         font-weight: 700;
-        font-size: 36px;
+        line-height: 28.8px;
+        text-align: center;
       }
     }
 
@@ -219,7 +244,7 @@
       }
     }
     .logo {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
 
       img {
         max-width: 195px;
@@ -228,7 +253,7 @@
     }
 
     .text-achievement {
-      margin-top: 35px;
+      margin-top: 30px;
     }
 
     .img-3d-wrapper {
@@ -244,22 +269,26 @@
 
     h3 {
       margin-top: 0;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     .year {
+      line-height: 19.2px;
       font-weight: 400;
       font-size: 16px;
       margin-bottom: 25px;
     }
 
     .place {
+      line-height: 19.2px;
       font-weight: 700;
       margin-bottom: 10px;
       color: var(--bg-8)
     }
 
     .site {
+      line-height: 19.2px;
+
       font-weight: 400;
     }
 
@@ -268,13 +297,19 @@
 
   @media (min-width: $mobile-breakpoint) {
 
-    .team-events{
-      .img-3d-wrapper{
+    .video {
+      .text-video {
+        width: 393px;
+      }
+
+    }
+    .team-events {
+      .img-3d-wrapper {
         margin-bottom: 80px;
       }
     }
-    .top{
-      h6{
+    .top {
+      h6 {
         max-width: 557px;
       }
     }
@@ -289,14 +324,15 @@
       .phone {
         margin-right: 225px;
 
-        .p4{
-          font-family: Panton-Light,serif;
+        .p4 {
+          font-family: Panton-Light, serif;
           font-size: 24px;
           font-weight: 300;
           line-height: 36px;
           letter-spacing: 0.03em;
           text-align: left;
         }
+
         //styleName: P4 Text Mobile;
 
 
@@ -313,7 +349,7 @@
         margin-bottom: 40px;
       }
 
-      h6{
+      h6 {
         margin: 0;
       }
 
@@ -384,6 +420,8 @@
 
       h3 {
         margin-left: 231px;
+
+        letter-spacing: 0;
       }
 
       .table-wrapper {

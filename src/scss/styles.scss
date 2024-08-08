@@ -21,20 +21,25 @@
 
 @font-face {
   font-family: Panton-SemiBold;
-  src: url("../../public/img/assets/fonts/Panton/Panton-Trial-SemiBold.ttf") format("truetype");
+  src: url("~/public/img/assets/fonts/Panton/Panton-Trial-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: Panton-Bold;
-  src: url("../../public/img/assets/fonts/Panton/Panton-Trial-Bold.ttf") format("truetype");
+  src: url("~/public/img/assets/fonts/Panton/Panton-Trial-Bold.ttf") format("truetype");
 }
 
 
 @font-face {
   font-family: Panton-ExtraBold;
-  src: url("../../public/img/assets/fonts/Panton/Panton-Trial-ExtraBold.ttf") format("truetype");
+  src: url("~/public/img/assets/fonts/Panton/Panton-Trial-ExtraBold.ttf") format("truetype");
 }
 
+//.icon-rounded {
+//  border-radius: $radius-8;
+//  padding: 5px;
+//  outline: $border;
+//}
 
 body {
   background-color: var(--bg-7);
@@ -48,7 +53,7 @@ body {
 
 a {
   text-decoration: none;
-  font-family: Panton-SemiBold, serif;
+  font-family: Panton SemiBold, serif;
   font-weight: 600;
   font-size: 14px;
   color: var(--bg-2);
@@ -56,12 +61,13 @@ a {
 
 .link-decoration {
   font-size: inherit;
-  text-decoration:underline !important;
+  text-decoration: underline !important;
 }
 
 .link {
   color: var(--bg-2);
-  width: fit-content ;
+  width: fit-content;
+
 
   &:hover {
     //border-bottom: 2px solid var(--bg-2);
@@ -85,7 +91,7 @@ a {
 // buttons
 // TODO: disabled
 
-.btn-icon{
+.btn-icon {
   cursor: pointer;
 }
 
@@ -94,9 +100,13 @@ a {
   border-radius: $radius;
   padding: 13px 37px;
   cursor: pointer;
+  //styleName: P5;
+  font-family: Panton SemiBold, serif;
   font-size: 14px;
-  font-family: Panton-SemiBold, serif;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 17.01px;
+  text-align: center;
+
 
   &.light {
     opacity: 0.88;
@@ -136,7 +146,8 @@ a {
 }
 
 ul {
-  padding-left: 1rem;
+  padding-left: 0.6rem;
+
   li {
     color: var(--bg-2); /* bullet color */
   }
@@ -172,27 +183,30 @@ h4 {
     max-width: $pc-breakpoint + 100px;
   }
 
+
 }
 
 // phone
 @media (max-width: $mobile-breakpoint) {
 
-  .btn-send-request{
-    max-width: 169px;
+  .btn-send-request {
+    width: 169px;
     max-height: 45px;
     padding: 14px 30px;
+    border-radius: 6px;
   }
 
   .btn {
     font-weight: 600;
+    border-radius: 6px;
   }
 
-    ul{
-    li{
-      margin-bottom: 1rem;
+  ul {
+    li {
+      margin-bottom: 1.05rem;
     }
 
-    li:last-child{
+    li:last-child {
       margin-bottom: 0;
     }
   }
@@ -202,7 +216,7 @@ h4 {
   }
 
   .container {
-    margin: 0 24px;
+    margin: 0 23px 0 24px;
   }
 
   h1, h2, h3, h4 {
@@ -238,18 +252,22 @@ h4 {
   }
 
   h6 {
-    font-size: 14px;
-    font-family: Panton-Light, serif;
-    font-weight: 300;
-    line-height: 16.8px;
+    //styleName: P3 Text Mobile;
+    font-family: Panton, serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.6px;
   }
 
   .p1 {
+    //styleName: P5 Text Mobile;
+    font-family: Panton Light;
     font-size: 14px;
-    font-family: Panton-Light, serif;
     font-weight: 300;
     line-height: 16.8px;
-    margin: 30px 0;
+    letter-spacing: 0.03em;
+    text-align: left;
+
   }
 
   .p2 {
@@ -275,26 +293,26 @@ h4 {
 
   .p5 {
     font-size: 14px;
-    font-family: Panton-Light, serif;
+    font-family: Panton Light, serif;
     font-weight: 300;
     line-height: 16.8px;
   }
 
-  .h6-p1{
+  .h6-p1 {
+    font-family: Panton;
     font-size: 16px;
-    font-family: Panton, serif;
     font-weight: 400;
     line-height: 19.2px;
   }
 
-  .h4-h1{
+  .h4-h1 {
     font-size: 24px;
     font-family: Panton, serif;
     font-weight: 700;
     line-height: 28.8px;
   }
 
-  .h6-h6{
+  .h6-h6 {
     font-size: 24px;
     font-family: Panton, serif;
     font-weight: 400;
@@ -306,13 +324,13 @@ h4 {
 // for pc
 @media (min-width: $mobile-breakpoint) {
 
-  .btn-send-request{
-    min-width: 170px;
+  .btn-send-request {
+    min-width: 171px;
     max-height: 45px;
     padding: 13px 37px;
   }
 
-  .pc-hide{
+  .pc-hide {
     display: none !important;
   }
 
@@ -322,25 +340,27 @@ h4 {
 
   h1 {
     font-size: 64px;
-    font-family: Panton-SemiBold, serif;
+    font-family: Panton SemiBold, serif;
     font-weight: 600;
     line-height: 58.32px;
   }
 
   h2 {
     font-size: 48px;
-    font-family: Panton-ExtraBold, serif;
+    font-family: Panton ExtraBold, serif;
     font-weight: 800;
     line-height: 59.04px;
   }
 
 
   h3 {
+    //styleName: H3;
+    font-family: Panton;
     font-size: 48px;
-    font-family: Panton, serif;
     font-weight: 700;
-   // line-height: 57.6px;
-    line-height: 3rem;
+    line-height: 57.6px;
+    letter-spacing: 0.03em;
+    text-align: left;
   }
 
   h4 {
@@ -354,7 +374,7 @@ h4 {
 
   h5 {
     font-size: 36px;
-    font-family: Panton-ExtraLight, serif;
+    font-family: Panton ExtraLight, serif;
     font-weight: 300;
     line-height: 43.52px;
   }
@@ -369,11 +389,13 @@ h4 {
 
   .p1 {
     //styleName: P1;
-    font-family: Panton-Light,serif;
+    //styleName: P1;
+    font-family: Panton Light, serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 1.52;
+    line-height: 26px;
     text-align: left;
+
 
     color: var(--bg-2);
     margin: 30px 0;
@@ -395,26 +417,26 @@ h4 {
 
   .p4 {
     font-size: 18px;
-    font-family: Panton-SemiBold, serif;
+    font-family: Panton SemiBold, serif;
     font-weight: 600;
     line-height: 21.87px;
   }
 
-  .h6-p1{
+  .h6-p1 {
     font-size: 24px;
     font-family: Panton, serif;
     font-weight: 400;
     line-height: 28.8px;
   }
 
-  .h4-h1{
+  .h4-h1 {
     font-size: 24px;
     font-family: Panton, serif;
     font-weight: 700;
     line-height: 28.8px;
   }
 
-  .h6-h6{
+  .h6-h6 {
     font-size: 24px;
     font-family: Panton, serif;
     font-weight: 400;

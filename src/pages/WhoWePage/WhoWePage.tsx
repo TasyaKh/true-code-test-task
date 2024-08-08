@@ -6,7 +6,7 @@ import {ProjectCards} from "./Cards/ProjectCards";
 import {TeamCards} from "./Cards/TeamCards";
 import {TeamPhotoCards} from "./Cards/TeamPhotoCards";
 import {EventsCards} from "./Cards/EventsCards";
-import { getWhoWePage} from "../../api/pages";
+import {getWhoWePage} from "../../api/pages";
 
 interface Props {
 }
@@ -31,6 +31,11 @@ export const WhoWePage: FC<Props> = () => {
     //     {year: "", place: "3 место", site: "Сайт EASY School"},
     //     {year: "2018", place: "Лучший сайт образовательного учреждения", site: "Сайт EASY School"}
     // ]
+    const [playVideo, setPlayVideo] = useState(false)
+
+    const onPlay = (play: boolean) => {
+        setPlayVideo(play)
+    }
 
     return (
         <div className="who-we-page">
@@ -65,7 +70,7 @@ export const WhoWePage: FC<Props> = () => {
                         <div className={"text-achievement"}>
                             <div className={"p1 m-0"}>
                                 {data?.text_under_top}
-                                </div>
+                            </div>
                         </div>
 
                         <div className={"img-3d-wrapper "}>
@@ -100,13 +105,20 @@ export const WhoWePage: FC<Props> = () => {
                         {/* video*/}
                         <div className={"video-wrapper"}>
                             <div className={"video"}>
-                                <img className={"img-resizable"} src={data?.video.img_cover} alt={"video"}/>
-                                <div className={"text-video"}>
-                                    {data?.video.title}
-                                </div>
-                                <div className={"play"}>
-                                    <img className={"img-resizable"} src={data?.video?.img_button} alt={"play"}/>
-                                </div>
+                                {!playVideo ? <div className={""} style={{width:"100%", height:"100%"}}>
+                                    <img className={"img-resizable"} src={data?.video.img_cover} alt={"video"}/>
+                                    <div className={"text-video"}>
+                                        {data?.video.title}
+                                    </div>
+                                    <div className={"play"} onClick={() => onPlay(true)}>
+                                        <img className={"img-resizable"} src={data?.video?.img_button} alt={"play"}/>
+                                    </div>
+
+                                </div> : <video controls style={{width: "100%"}}>
+                                    <source src={data?.video?.video_link} type="video/webm"/>
+                                    video.
+                                </video>
+                                }
                             </div>
                         </div>
                     </div>

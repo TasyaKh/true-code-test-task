@@ -7,10 +7,11 @@
   justify-content: center;
 
   @mixin font-style() {
-    font-family: Panton-Light, serif;
+    font-family: Panton;
     font-size: 16px;
-    font-weight: 300;
-    line-height: 26px;
+    font-weight: 400;
+    line-height: 19.2px;
+    /* text-align: center; */
     color: var(--bg-2);
   }
 
@@ -27,8 +28,6 @@
     }
   }
 
-
-
   .notebook-textbox {
     @include font-style();
 
@@ -38,22 +37,15 @@
     //height: 300px;
     padding: 0px;
     font-size: 16px;
-    line-height: 24px; /* 1.5 times the font size */
+    line-height: 22px; /* 1.5 times the font size */
     background: repeating-linear-gradient(
                     to bottom,
                     rgba(0, 0, 0, 0),
-                    rgba(0, 0, 0, 0) calc(24px - 2px), /* Adjust the end of the white background to leave space for the line */
-                    var(--bg-2) calc(24px - 2px), /* Start of the line */
-                    var(--bg-2) 24px /* End of the line */
+                    rgba(0, 0, 0, 0) calc(22px - 2px), /* Adjust the end of the white background to leave space for the line */
+                    var(--bg-2) calc(22px - 2px), /* Start of the line */
+                    var(--bg-2) 22px /* End of the line */
     );
 
-    //background: repeating-linear-gradient(
-    //                to bottom,
-    //                #fff,
-    //                #fff calc(2em - 2px), /* Adjust the end of the white background to leave space for the line */
-    //                var(--bg-2) calc(2em - 2px), /* Start of the line */
-    //                var(--bg-2) 2em /* End of the line */
-    //);
     resize: none;
     outline: none;
 
@@ -86,15 +78,25 @@
 
   }
 
+  .border-wrapper {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      border-bottom: 2px solid var(--bg-2);
+      position: absolute;
+      content: "";
+      width: 100%;
+    }
+  }
+
   .form-input {
     @include font-style();
-
     border: none;
     width: 100%;
     background: transparent;
-    border-bottom: 2px solid var(--bg-2);
     outline: none;
-
 
     &[type="file"] {
       display: none;
@@ -111,7 +113,7 @@
     }
   }
 
-  .form-wrapper {
+  .form-border {
     border-radius: $radius-30;
     background-color: var(--bg-1);
     outline: $border;
@@ -119,7 +121,7 @@
 }
 
 .text-or {
-  margin-top: 20px;
+  margin-top: 25px;
   margin-bottom: 15px;
   text-align: center;
   display: flex;
@@ -129,24 +131,99 @@
 
 @media (max-width: $mobile-breakpoint) {
 
+  .border-wrapper {
+
+    &:after {
+      left: 5px;
+      bottom: -8px;
+    }
+  }
+
   .btn-wrapper{
     margin-top: 30px;
     display: flex;
     justify-content: center;
   }
 
-
-  .wrapper1 {
-    gap: 45px
+  .about{
+    margin-top: 25px;
+    margin-bottom: 20px;
   }
 
+  .check{
+    //margin-top: 20px;
+    //margin-bottom: 30px;
+
+    //styleName: P3 Text Mobile;
+    font-family: Panton;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.6px;
+
+  }
+
+
+  .wrapper1 {
+    gap: 49px;
+  }
+
+
   .form-wrapper {
-    padding:  45px 28px 34px 28px;
+    margin:  45px 28px 34px 28px;
+  }
+
+  .form-border{
     width: 100%;
   }
 }
 
 @media (min-width: $mobile-breakpoint) {
+
+  .wrapper-label{
+    width: 342px !important;
+  }
+
+  .checkbox-label{
+    //styleName: P3;
+    font-family: Panton Light;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14.48px;
+
+  }
+
+  .about{
+    margin-bottom: 22px;
+  }
+
+  .file{
+    margin-bottom: 43px;
+  }
+
+  .text-or {
+    margin-top: 20px;
+    margin-bottom: 6px;
+  }
+
+  .name{
+    margin-bottom: 61px;
+  }
+
+  .tel{
+    margin-bottom: 55px;
+  }
+
+  .direction{
+    margin-bottom: 51px;
+  }
+
+  .border-wrapper {
+
+    &:after {
+      left: 5px;
+      bottom: -1px;    }
+  }
+
 
   .btn-wrapper{
     margin-top: 37px;
@@ -155,13 +232,16 @@
   }
 
   .wrapper1 {
-    gap: 41px
+    //gap: 51px
   }
 
   .form-wrapper {
-    padding: 55px 45px 45px 40px;
-    width: 593px;
+    margin: 55px 45px 45px 40px;
     //width: 40%;
+  }
+
+  .form-border{
+    width: 593px;
   }
 
 }

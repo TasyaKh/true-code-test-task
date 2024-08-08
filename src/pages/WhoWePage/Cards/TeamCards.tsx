@@ -1,7 +1,5 @@
 import React, {FC} from 'react';
 import './TeamCards.scss';
-import {BtnsCards} from "../../../components/elements/buttons/BtnsCards/BtnsCards";
-import {BtnArrowDown} from "../../../components/elements/buttons/BtnArrowDown/BtnArrowDown";
 
 interface Props {
     teamCards: any
@@ -35,6 +33,7 @@ export const TeamCards: FC<Props> = ({teamCards}) => {
                             <div className={"card-img"}>
                                 <img src={teamCards[key].img} className={"img-resizable"} alt={""}/>
                             </div>
+                            <div className={"card-text-wrapper"}>
                             <div className={"card-text"}>
                                 <div className={"card-name"}>
                                     <div className={"h4-h1 m-0"}>{teamCards[key].name}</div>
@@ -42,6 +41,7 @@ export const TeamCards: FC<Props> = ({teamCards}) => {
                                 <div className={"card-role"}>
                                     <div className={"h6-h6 m-0"}>{teamCards[key].role}</div>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
