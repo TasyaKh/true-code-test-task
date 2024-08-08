@@ -17,6 +17,10 @@ export const useRoutes = () => {
                 <Vacancies/>
             </Route>
 
+            <Route exact path="/vacancies">
+                <Vacancies/>
+            </Route>
+
             <Route  path="/rules">
                 <RulesPage/>
             </Route>

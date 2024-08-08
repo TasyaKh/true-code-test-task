@@ -179,7 +179,8 @@ h4 {
 // extra laarge
 @media (min-width: $pc-breakpoint + 200px) {
   .container {
-    margin: 0 auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     max-width: $pc-breakpoint + 100px;
   }
 

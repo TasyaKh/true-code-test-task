@@ -18,9 +18,6 @@ export const WeOffersPage: FC<Props> = () => {
     const getOffers = async () => {
         const d = await getWeOffers()
         setData(d)
-
-        console.log("dddS", d.sections)
-
     }
 
     return (

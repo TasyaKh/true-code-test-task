@@ -31,7 +31,7 @@ export const ProjectCards: FC<Props> = ({cardsProjects, buttonName}) => {
         if (cardsProjects) {
             const c = Object.keys(cardsProjects).map((key) => (
                 <div className={"col-auto"}>
-                    <Card footerChild={cardFooter(cardsProjects[key]?.page)}
+                    <Card footerChild={cardFooter("cardsProjects[key]?.page")}
                           title={cardsProjects[key]?.title} imgSrc={cardsProjects[key]?.img}/>
                 </div>
             ))

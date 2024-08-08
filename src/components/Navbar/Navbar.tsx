@@ -22,18 +22,18 @@ export const Navbar: FC<Props> = () => {
     }
 
 
-    const dropdownVacancy = [
-        {id: 1, name: "Веб-дизайнер", redirect: "/vacancy-1"},
-        {id: 2, name: "Разработчик", redirect: "/vacancy-2"},
-        {id: 3, name: "Менеджер проектов", redirect: "/vacancy-3"},
-    ]
-    const menu = [
-        {id: 1, name: "Вакансии", redirect: "/", dropdown: dropdownVacancy},
-        {id: 2, name: "Кто мы?", redirect: "/who-we", dropdown: null},
-        {id: 3, name: "Что мы предлагаем?", redirect: "/we-offers", dropdown: null},
-        {id: 4, name: "Отзывы", redirect: "reviews", dropdown: null},
-        {id: 4, name: "Правила", redirect: "/rules", dropdown: null},
-    ]
+    // const dropdownVacancy = [
+    //     {id: 1, name: "Веб-дизайнер", redirect: "/vacancy1"},
+    //     {id: 2, name: "Разработчик", redirect: "/vacancy2"},
+    //     {id: 3, name: "Менеджер проектов", redirect: "/vacancy3"},
+    // ]
+    // const menu = [
+    //     {id: 1, name: "Вакансии", redirect: "/", dropdown: vacancies},
+    //     {id: 2, name: "Кто мы?", redirect: "/who-we", dropdown: null},
+    //     {id: 3, name: "Что мы предлагаем?", redirect: "/we-offers", dropdown: null},
+    //     {id: 4, name: "Отзывы", redirect: "reviews", dropdown: null},
+    //     {id: 4, name: "Правила", redirect: "/rules", dropdown: null},
+    // ]
 
     return (
         <div className={"container"}>
@@ -89,35 +89,35 @@ export const Navbar: FC<Props> = () => {
 
                         <div className={"col-auto d-flex align-items-center justify-content-center"}>
                             <div className={"row menu-wrapper"}>
-                                {menu && menu.map((el) =>
+                                {data?.links && Object.keys(data?.links).map((key, index) =>
                                     <div className={"col-12 col-lg-auto p-0 d-flex justify-content-center"}>
                                         {/* dropdown */}
 
-                                        {el.dropdown &&
+                                        {key === "vacancies" &&
                                             <div className={"d-lg-none d-block"}>
                                                 <Dropdown child={
                                                     <div className={"row sub-menu-wrapper"}>
 
-                                                        {el.dropdown && el.dropdown.map((el) => (
+                                                        {data?.vacancies && Object.keys(data?.vacancies).map((key2,index) => (
 
                                                             <div
                                                                 className={"col-12 col-lg-auto p-0 d-flex justify-content-center " +
                                                                     ""}>
-                                                                <Link to={el.redirect}>
+                                                                <Link to={`vacancy?key=${key2}`}>
                                                                     <div
-                                                                        className={"sub-link link"}> {el.name}</div>
+                                                                        className={"sub-link link"}> {data?.vacancies[key2]?.header}</div>
                                                                 </Link>
 
                                                             </div>
 
                                                         ))}
                                                     </div>
-                                                } title={el.name}/>
+                                                } title={data?.links[key]}/>
                                             </div>}
 
-                                        <div className={`${el.dropdown ? "d-lg-block d-none" : ""} `}>
-                                            <Link to={el.redirect}>
-                                                <div className={"link"}> {el.name}</div>
+                                        <div className={`${key === "vacancies" ? "d-lg-block d-none" : ""} `}>
+                                            <Link to={key}>
+                                                <div className={"link"}> {data?.links[key]}</div>
                                             </Link>
                                         </div>
 

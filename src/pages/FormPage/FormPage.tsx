@@ -5,6 +5,7 @@ import {getMainPageContent} from "../../api/pages";
 import {Footer} from "../../components/Footer/Footer";
 
 interface Props {
+
 }
 
 export const FormPage: FC<Props> = () => {
