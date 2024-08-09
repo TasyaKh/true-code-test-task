@@ -99,7 +99,7 @@ export const WhoWePage: FC<Props> = () => {
                         <div className={"video-wrapper"}>
                             <div className={"video"}>
                                 {!playVideo ? <div className={""} style={{width:"100%", height:"100%"}}>
-                                    <img className={"img-resizable"} src={data?.video.img_cover} alt={"video"} style={{opacity:0.5}}/>
+                                    <img className={"img-resizable img-cover"} src={data?.video.img_cover} alt={"video"} style={{opacity:0.5}}/>
                                     <div className={"text-video"}>
                                         {data?.video.title}
                                     </div>
@@ -152,8 +152,8 @@ export const WhoWePage: FC<Props> = () => {
                         <div className={"text"}>
                             <h6>
                                 {data?.text_bottom}
-                                {/*<a className={"link-decoration"}*/}
-                                {/*   href={"https://t-code.ru"}> сайт</a>*/}
+                                <a className={"link-decoration"}
+                                   href={data?.site.link}> {data?.site.name}</a>
                             </h6>
                         </div>
 

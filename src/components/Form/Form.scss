@@ -22,10 +22,7 @@
   }
 
   .btn-wrapper{
-    button{
-      width: 235px;
-      height: 50px;
-    }
+
   }
 
   .notebook-textbox {
@@ -129,6 +126,22 @@
     justify-content: center;
   }
 
+  @media (min-width: $mobile-breakpoint) {
+    .btn-wrapper{
+
+      button{
+        //styleName: P4;
+        font-family: Panton SemiBold;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21.87px;
+        text-align: center;
+      }
+
+    }
+
+  }
+
 
   @media (max-width: $mobile-breakpoint) {
 
@@ -144,6 +157,12 @@
       margin-top: 30px;
       display: flex;
       justify-content: center;
+
+      button{
+        width: 235px;
+        height: 50px;
+      }
+
     }
 
     .about{

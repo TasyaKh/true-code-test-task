@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import './VacancyTemplate.scss';
-import {Navbar} from "./Navbar/Navbar";
-import {Footer} from "./Footer/Footer";
+import {Navbar} from "../../components/Navbar/Navbar";
+import {Footer} from "../../components/Footer/Footer";
 
 interface Props {
     child: React.ReactNode

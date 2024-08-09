@@ -27,14 +27,14 @@ export const VacancyWrapper = () => {
 
     switch (key) {
         case 'vacancy1':
-            return <Vacancy1 vacancy={currentVacancy}/>;
+            return <Vacancy1 vacancy={currentVacancy} data={data}/>;
         case 'vacancy2':
             // eslint-disable-next-line react/jsx-no-undef
-            return <Vacancy2 vacancy={currentVacancy}/>;
+            return <Vacancy2 vacancy={currentVacancy} data={data}/>;
         case 'vacancy3':
-            return <Vacancy3 vacancy={currentVacancy}/>;
+            return <Vacancy3 vacancy={currentVacancy} data={data}/>;
         default:
             // eslint-disable-next-line react/jsx-no-undef
-            return <Vacancy vacancy={currentVacancy}/>;
+            return <Vacancy vacancy={currentVacancy} data={data}/>;
     }
 }

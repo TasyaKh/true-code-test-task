@@ -36,7 +36,7 @@ export const RulesPage: FC<Props> = () => {
                 {data?.sections && Object.keys(data?.sections).map((key, index) => (
                     <>
                         <h4> {data?.sections[key]?.header}</h4>
-                        <p className={`p1`} style={{maxWidth: "910px"}}
+                        <p className={`p1`} style={{maxWidth: "1026px"}}
                            dangerouslySetInnerHTML={{__html: data?.sections[key]?.text}}>
                         </p>
                     </>

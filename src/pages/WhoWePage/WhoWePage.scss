@@ -189,7 +189,7 @@
 
     .who-we-footer {
       h3 {
-        margin-top: 35px;
+        margin-top: 30px;
         //margin-bottom: 30px;
         margin-bottom: 0;
       }
@@ -199,7 +199,8 @@
       }
 
       .text {
-        margin-top: 30px;
+        //margin-top: 30px;
+        margin-top: 20px;
         margin-bottom: 40px;
         display: flex;
         justify-content: center;
@@ -227,7 +228,11 @@
       margin: 35px 0;
 
       .video {
-        height: 328px;
+        //height: 328px;
+        height: fit-content;
+        .img-cover{
+          min-height: 328px;
+        }
 
         .text-video {
           top: 63px;

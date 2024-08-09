@@ -1,13 +1,14 @@
 import React, {FC} from 'react';
 import './Vacancy.scss';
-import {VacancyTemplate} from "../../components/VacancyTemplate";
+import {VacancyTemplate} from "./VacancyTemplate";
 import {Link} from "react-router-dom";
 
 interface Props {
     vacancy: any
+    data:any
 }
 
-export const Vacancy: FC<Props> = ({vacancy}) => {
+export const Vacancy: FC<Props> = ({vacancy, data}) => {
 
     const child = (
         <div className={"vacancy"}>
@@ -23,7 +24,7 @@ export const Vacancy: FC<Props> = ({vacancy}) => {
                         <div className={"btn-wrapper"}>
                             <Link to={"/form"}>
                             <button className={"btn light"}>
-                                Подать заявку
+                                {data?.button_request}
                             </button>
                             </Link>
                         </div>
