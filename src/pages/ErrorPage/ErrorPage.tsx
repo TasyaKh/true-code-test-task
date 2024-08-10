@@ -3,7 +3,8 @@ import './ErrorPage.scss';
 import {Navbar} from "../../components/Navbar/Navbar";
 import {Footer} from "../../components/Footer/Footer";
 import {Link} from "react-router-dom";
-import {getErrorPage, getWhoWePage} from "../../api/pages";
+import {getErrorPage} from "../../api/pages";
+import gauss from "assets/gauss.png"
 
 interface Props {
 }
@@ -45,7 +46,7 @@ export const ErrorPage: FC<Props> = () => {
 
             </div>
             <div className={"img-gauss"}>
-                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                <img className={"img-resizable"} src={gauss} alt={""}/>
             </div>
 
         </div>

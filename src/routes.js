@@ -9,7 +9,6 @@ import {ReviewsPage} from "./pages/ReviewsPage/ReviewsPage";
 import {VacancyWrapper} from "./pages/MainPage/VacancyWrapper";
 import {FormPage} from "./pages/FormPage/FormPage";
 
-
 export const useRoutes = () => {
     return (
         <Switch>

@@ -1,35 +1,35 @@
 @import "src/scss/vars";
 .icon-vk{
-  background-image: url("~/public/img/assets/icons/vk.svg") ;
+  background-image: url("~/src/assets/icons/vk.svg") ;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   cursor: pointer;
 
   &:hover{
-    background-image: url("~/public/img/assets/icons/vk-hover.svg");
+    background-image: url("~/src/assets/icons/vk-hover.svg");
   }
 }
 
 .icon-facebook{
-  background-image: url("~/public/img/assets/icons/facebook.svg");
+  background-image: url("~/src/assets/icons/facebook.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
 
 
   &:hover{
-    background-image: url("~/public/img/assets/icons/facebook-hover.svg");
+    background-image: url("~/src/assets/icons/facebook-hover.svg");
   }
 }
 
 .icon-instagram{
-  background-image: url("~/public/img/assets/icons/instagram.svg");
+  background-image: url("~/src/assets/icons/instagram.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   cursor: pointer;
 
   &:hover{
-    background-image: url("~/public/img/assets/icons/instagram-hover.svg");
+    background-image: url("~/src/assets/icons/instagram-hover.svg");
   }
 }
 

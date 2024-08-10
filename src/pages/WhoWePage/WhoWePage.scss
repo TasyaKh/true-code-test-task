@@ -61,11 +61,17 @@
 
       .row {
         justify-items: center;
+        margin-top: 37px;
+        &:first-child{
+          margin-top: 0;
+        }
+
       }
 
     }
 
     .text-achievement {
+
       display: flex;
       justify-content: center;
 
@@ -84,7 +90,7 @@
         overflow: hidden;
         position: relative;
         max-width: 1162px;
-        max-height: 654px;
+        max-height: 650px;
         outline: $border;
         border-radius: $radius-20;
       }
@@ -105,6 +111,7 @@
   }
 
   .true-gif {
+    transform: translateY(-10px);
     position: relative;
     width: 279px;
     max-height: 275px;
@@ -141,7 +148,8 @@
 
   .who-we-footer {
     text-align: center;
-    h3{
+
+    h3 {
       text-align: center;
     }
 
@@ -153,6 +161,28 @@
 
   @media (max-width: $mobile-breakpoint) {
 
+    .team-events {
+      .img-3d-wrapper {
+        margin-top: 35px;
+      }
+    }
+    .table-wrapper{
+      margin-bottom: 30px;
+    }
+    .text-achievement {
+      margin-bottom: 50px;
+    }
+      .table-achievements{
+      letter-spacing: -0.3px;
+    }
+
+    .table_wrapper-empty{
+      margin-top: 13px !important;
+    }
+
+    .empty-year{
+      margin-bottom: 0 !important;
+    }
 
     h6 {
       //styleName: P5 Text Mobile;
@@ -166,7 +196,7 @@
     }
 
     .contacts-wrapper {
-      gap: 30px;
+      gap: 25px;
 
       .phone {
         font-family: Panton-Light, serif;
@@ -195,12 +225,13 @@
       }
 
       h6 {
+        letter-spacing: -0.1px;
         margin: 0;
       }
 
       .text {
         //margin-top: 30px;
-        margin-top: 20px;
+        margin-top: 26px;
         margin-bottom: 40px;
         display: flex;
         justify-content: center;
@@ -213,6 +244,15 @@
       }
     }
 
+    .team{
+
+      .h6-p1{
+        letter-spacing: -0.4px;
+      }
+      .img-3d-wrapper{
+        margin-top: 35px;
+      }
+    }
     .team-photo {
       .header {
         //styleName: H1 Header Mobile;
@@ -225,13 +265,14 @@
     }
 
     .video-wrapper {
-      margin: 35px 0;
+      margin: 35px 0 30px 0;
 
       .video {
         //height: 328px;
         height: fit-content;
-        .img-cover{
-          min-height: 328px;
+
+        .img-cover {
+          min-height: 320px;
         }
 
         .text-video {
@@ -262,7 +303,7 @@
     }
 
     .img-3d-wrapper {
-      margin-top: 35px;
+      //margin-top: 50px;
       margin-bottom: 35px;
 
       .img-ring {
@@ -273,28 +314,33 @@
 
 
     h3 {
+
       margin-top: 0;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .year {
       line-height: 19.2px;
       font-weight: 400;
       font-size: 16px;
-      margin-bottom: 25px;
+      margin-bottom: 22px;
     }
 
     .place {
       line-height: 19.2px;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
       color: var(--bg-8)
     }
 
     .site {
       line-height: 19.2px;
-
+      margin-bottom: 35px;
       font-weight: 400;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
     }
 
 
@@ -310,7 +356,7 @@
     }
     .team-events {
       .img-3d-wrapper {
-        margin-bottom: 80px;
+        margin-bottom: 84px;
       }
     }
     .top {
@@ -330,6 +376,7 @@
         margin-right: 225px;
 
         .p4 {
+          margin-top: 8px;
           font-family: Panton-Light, serif;
           font-size: 24px;
           font-weight: 300;
@@ -350,11 +397,13 @@
 
     .who-we-footer {
       h3 {
-        margin-top: 60px;
-        margin-bottom: 40px;
+        margin-top: 55px;
+        margin-bottom: 26px;
+        letter-spacing: 0.04rem;
       }
 
       h6 {
+        letter-spacing: -0.08rem;
         margin: 0;
       }
 
@@ -371,12 +420,12 @@
     }
 
     .video-wrapper {
-      margin: 80px 0;
+      margin: 80px 0 0 0;
 
       .video {
 
         .text-video {
-          top: 270px;
+          top: 264px;
           left: 98px;
           font-size: 72px;
         }
@@ -392,24 +441,25 @@
 
     .team {
       .img-3d-wrapper {
-        margin-top: 80px;
-        margin-bottom: 40px;
+        margin-top: 88px;
+        margin-bottom: 46px;
       }
 
       .h6-p1 {
-        max-width: 1009px;
+        letter-spacing: 0.2px;
+        max-width: 1011px;
       }
     }
 
 
     .projects {
       .img-3d-wrapper {
-        margin: 80px 0;
+        margin: 80px 0 85px 0;
       }
     }
 
     .logo {
-      margin-bottom: 40px;
+      margin-bottom: 35px;
 
       img {
         max-width: 386px;
@@ -418,15 +468,14 @@
     }
 
     .text-achievement {
-      margin-top: 108px;
+      margin-top: 102px;
     }
 
     .achievement {
 
       h3 {
         margin-left: 231px;
-
-        letter-spacing: 0;
+        letter-spacing: -1px;
       }
 
       .table-wrapper {
@@ -457,9 +506,9 @@
     }
 
     .text-1 {
-      min-width: 557px;
-      padding-right: 230px;
-
+      letter-spacing: 0.2px;
+      min-width: 559px;
+      margin-right: 174px;
     }
 
     .achievement {

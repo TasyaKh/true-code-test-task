@@ -1,5 +1,6 @@
 import "./Checkbox.scss"
 import React, {FC, useState} from "react";
+import checkbox from "assets/icons/checkbox-checked.svg"
 
 interface Props {
     onChecked: (event: any) => void
@@ -23,7 +24,7 @@ export const Checkbox: FC<Props> = ({onChecked, name}) => {
                         <input type="checkbox" id="checkbox" checked={isChecked}
                                onChange={handleCheckboxChange}/>
                         <div className="checkbox-image">
-                            <img src={"img/assets/icons/checkbox-checked.svg"} alt="checkbox"/>
+                            <img src={checkbox} alt="checkbox"/>
                         </div>
                     </div>
 

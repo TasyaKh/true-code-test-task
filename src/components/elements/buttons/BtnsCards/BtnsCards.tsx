@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import './BtnsCards.scss';
-
+import arrow_back from "assets/icons/arrow-back.svg"
+import arrow_forward from "assets/icons/arrow-forward.svg"
 
 interface Props {
     onForwardClick: () => void;
@@ -15,12 +16,12 @@ export const BtnsCards: FC<Props> = ({onForwardClick, onBackClick}) => {
             <div className={"row buttons"}>
                 <div className={"col-auto"}>
                     <div className={"btn-icon"} onClick={onBackClick}>
-                        <img src={"img/assets/icons/arrow-back.svg"} alt={"back"}/>
+                        <img src={arrow_back} alt={"back"}/>
                     </div>
                 </div>
                 <div className={"col-auto"}  onClick={onForwardClick}>
                     <div className={"btn-icon"}>
-                    <img src={"img/assets/icons/arrow-forward.svg"} alt={"forward"}/>
+                    <img src={arrow_forward} alt={"forward"}/>
                 </div>
                 </div>
             </div>

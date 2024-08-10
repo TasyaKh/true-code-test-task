@@ -4,6 +4,7 @@ import {Checkbox} from "../elements/Checkbox/Checkbox";
 import axiosInstance from "../../api/axiosInstance";
 import {MAIL_TO} from "../../config/constants";
 import {getFormContent} from "../../api/pages";
+import clip from "assets/icons/clip.svg"
 
 interface Props {
 }
@@ -160,7 +161,7 @@ export const Form: FC<Props> = () => {
                                     <div className="img-wrapper">
                                         <img
                                             style={{width: '16px', height: '16px'}}
-                                            src="img/assets/icons/clip.svg"
+                                            src={clip}
                                             alt="attach file"
                                         />
                                     </div>

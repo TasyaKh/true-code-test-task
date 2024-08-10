@@ -52,6 +52,7 @@
   }
 
   .custom-file-upload {
+    letter-spacing: -0.4px;
     display: flex;
     cursor: pointer;
     align-items: center;
@@ -94,6 +95,7 @@
     width: 100%;
     background: transparent;
     outline: none;
+    letter-spacing: -0.4px;
 
     &[type="file"] {
       display: none;
@@ -120,7 +122,7 @@
 
   .text-or {
     margin-top: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -154,20 +156,22 @@
     }
 
     .btn-wrapper{
-      margin-top: 30px;
+      margin-top: 25px;
       display: flex;
       justify-content: center;
 
       button{
+        font-size: 18px;
         width: 235px;
         height: 50px;
+        padding: 0;
       }
 
     }
 
     .about{
       margin-top: 25px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .check{
@@ -189,7 +193,7 @@
 
 
     .form-wrapper {
-      margin:  45px 28px 34px 28px;
+      margin: 44px 28px 34px 28px;
     }
 
     .form-border{
@@ -200,6 +204,7 @@
   @media (min-width: $mobile-breakpoint) {
 
     .wrapper-label{
+      line-height: 5px;
       width: 342px !important;
     }
 
@@ -222,7 +227,7 @@
 
     .text-or {
       margin-top: 20px;
-      margin-bottom: 6px;
+      margin-bottom: 12px;
     }
 
     .name{
@@ -246,7 +251,7 @@
 
 
     .btn-wrapper{
-      margin-top: 37px;
+      margin-top: 34px;
       display: flex;
       justify-content: center;
     }
@@ -256,12 +261,12 @@
     }
 
     .form-wrapper {
-      margin: 55px 45px 45px 40px;
+      margin: 55px 45px 40px 40px;
       //width: 40%;
     }
 
     .form-border{
-      width: 593px;
+      width: 590px;
     }
 
   }

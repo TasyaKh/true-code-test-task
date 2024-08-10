@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import './VacancyTemplate.scss';
 import {Navbar} from "../../components/Navbar/Navbar";
 import {Footer} from "../../components/Footer/Footer";
+import gauss from "assets/gauss.png"
 
 interface Props {
     child: React.ReactNode
@@ -24,7 +25,7 @@ export const VacancyTemplate: FC<Props> = ({child, title}) => {
                     </div>
 
                     <div className={"img-gauss pc-hide"}>
-                        <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                        <img className={"img-resizable"} src={gauss} alt={""}/>
                     </div>
                 </div>
                 <Footer/>

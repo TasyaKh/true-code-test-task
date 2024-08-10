@@ -64,7 +64,7 @@ export const Footer: FC<Props> = () => {
                     <div
                         className={"col-sm-auto col-12 d-flex justify-content-sm-end justify-content-center btn-footer"}>
                         <Link to={"/form"}>
-                            <button className={"m-md-0 mx-4 btn light btn-footer"}>{data?.button_request}</button>
+                            <button className={"m-md-0 mx-4 btn light"}>{data?.button_request}</button>
                         </Link>
                     </div>
                     <div className={"col-sm-auto col-12 d-flex justify-content-center"}>

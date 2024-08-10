@@ -3,6 +3,7 @@ import './FormPage.scss';
 import {Form} from "../../components/Form/Form";
 import {getMainPageContent} from "../../api/pages";
 import {Footer} from "../../components/Footer/Footer";
+import gauss from "assets/gauss.png"
 
 interface Props {
 
@@ -33,7 +34,7 @@ export const FormPage: FC<Props> = () => {
             </div>
 
             <div className={"img-gauss mobile-hide"}>
-                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                <img className={"img-resizable"} src={gauss} alt={""}/>
             </div>
 
             <Footer/>

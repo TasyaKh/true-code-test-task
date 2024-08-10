@@ -9,10 +9,14 @@
   @media (max-width: $mobile-breakpoint) {
     margin: 35px 0;
 
+    //addition
+    .button-down{
+      margin-top: 40px;
+    }
     .cards-wrapper {
       margin-top: 35px;
 
-      gap: 35px;
+      gap: 38px;
       justify-content: center;
 
       .buttons {
@@ -33,8 +37,8 @@
     margin: 40px 0 0 0;
 
     .cards-wrapper {
-      gap: 35px;
-      margin: 35px 0;
+      gap: 33px;
+      margin: 42px 0;
 
       .buttons {
         gap: 24px;

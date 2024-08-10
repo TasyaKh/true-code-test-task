@@ -7,6 +7,7 @@ import {TeamCards} from "./Cards/TeamCards";
 import {TeamPhotoCards} from "./Cards/TeamPhotoCards";
 import {EventsCards} from "./Cards/EventsCards";
 import {getWhoWePage} from "../../api/pages";
+import gauss from "assets/gauss.png"
 
 interface Props {
 }
@@ -52,7 +53,7 @@ export const WhoWePage: FC<Props> = () => {
                                 </div>
 
                                 <div className={"img-gauss1"}>
-                                    <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                                    <img className={"img-resizable"} src={gauss} alt={""}/>
                                 </div>
                             </div>
                         </div>
@@ -77,8 +78,8 @@ export const WhoWePage: FC<Props> = () => {
                         <div className={"table-wrapper"}>
                             <div className={"table-achievements"}>
                                 {data?.table_sites && Object.keys(data?.table_sites).map(((key) => (
-                                    <div className={"row"}>
-                                        <div className={"col-sm-auto col-12 year"}>{data.table_sites[key].year}</div>
+                                    <div className={`row ${!data.table_sites[key].year ? 'table_wrapper-empty' : ""}`}>
+                                        <div className={`col-sm-auto col-12 year ${!data.table_sites[key].year ? 'empty-year' :"" }` }>{data.table_sites[key].year}</div>
                                         <div className={"col-sm-auto col-12 place"}> {data.table_sites[key].place}</div>
                                         <div className={"col-sm col-12 site"}>{data.table_sites[key].site_name}</div>
                                     </div>
@@ -180,15 +181,15 @@ export const WhoWePage: FC<Props> = () => {
             </div>
 
             <div className={"img-gauss pc-hide"}>
-                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                <img className={"img-resizable"} src={gauss} alt={""}/>
             </div>
 
             <div className={"img-gauss2 mobile-hide"}>
-                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                <img className={"img-resizable"} src={gauss} alt={""}/>
             </div>
 
             <div className={"img-gauss3 mobile-hide"}>
-                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                <img className={"img-resizable"} src={gauss} alt={""}/>
             </div>
 
             <Footer/>

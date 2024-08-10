@@ -3,6 +3,7 @@ import './RulesPage.scss';
 import {Footer} from "../../components/Footer/Footer";
 import {Navbar} from "../../components/Navbar/Navbar";
 import {getRulesContent} from "../../api/pages";
+import gauss from "assets/gauss.png"
 
 interface Props {
 }
@@ -43,11 +44,11 @@ export const RulesPage: FC<Props> = () => {
                 ))}
 
                 <div className={"img-gauss mobile-hide"}>
-                    <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                    <img className={"img-resizable"} src={gauss} alt={""}/>
                 </div>
 
                 <div className={"img-gauss1 pc-hide"}>
-                    <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                    <img className={"img-resizable"} src={gauss} alt={""}/>
                 </div>
             </div>
 

@@ -15,7 +15,7 @@ export const TeamCards: FC<Props> = ({teamCards}) => {
                     <div className={"col-auto"}>
                         <div className={"team-card"}>
                             <div className={"card-img"}>
-                                <img src={teamCards[key].img} className={"img-contain"} alt={""}/>
+                                <img src={teamCards[key].img} className={"img-resizable"} alt={""}/>
                             </div>
                             <div className={"card-text-wrapper"}>
                             <div className={"card-text"}>

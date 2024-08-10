@@ -18,6 +18,9 @@
   @media (max-width: $mobile-breakpoint) {
     //margin: 35px 0;
 
+    .button-down {
+      margin-top: 20px;
+    }
     h4{
       //styleName: H1 Header Mobile;
       font-family: Panton;
@@ -40,7 +43,7 @@
       //margin-bottom: 60px;
       display: flex;
 
-      gap: 35px;
+      gap: 28px;
       justify-content: center;
 
       .team-card {
@@ -65,9 +68,9 @@
     }
 
     .cards-wrapper {
-      gap: 35px;
+      gap: 34px;
       margin-top: 35px;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       display: flex;
       justify-content: center;
     }

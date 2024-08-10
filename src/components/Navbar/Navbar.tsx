@@ -21,20 +21,6 @@ export const Navbar: FC<Props> = () => {
         setData(d)
     }
 
-
-    // const dropdownVacancy = [
-    //     {id: 1, name: "Веб-дизайнер", redirect: "/vacancy1"},
-    //     {id: 2, name: "Разработчик", redirect: "/vacancy2"},
-    //     {id: 3, name: "Менеджер проектов", redirect: "/vacancy3"},
-    // ]
-    // const menu = [
-    //     {id: 1, name: "Вакансии", redirect: "/", dropdown: vacancies},
-    //     {id: 2, name: "Кто мы?", redirect: "/who-we", dropdown: null},
-    //     {id: 3, name: "Что мы предлагаем?", redirect: "/we-offers", dropdown: null},
-    //     {id: 4, name: "Отзывы", redirect: "reviews", dropdown: null},
-    //     {id: 4, name: "Правила", redirect: "/rules", dropdown: null},
-    // ]
-
     return (
         <div className={"container"}>
             <nav className={"navbar"}>
@@ -42,14 +28,14 @@ export const Navbar: FC<Props> = () => {
                     <div className={"d-lg-none col"} style={{marginBottom: "23px"}}>
                         <Link to={"/"} className={""}>
                             <div className={"logo-header "}>
-                                <img src={"/img/logo-full.png"} className={"img-contain"}
+                                <img src={data?.logo_full} className={"img-contain"}
                                      alt={"logo"}/>
                             </div>
                         </Link>
                     </div>
                     <div className={"col-auto"}>
                         <label htmlFor="collapse">
-                            <img src={"img/hamburger.svg"} alt="hamburger"/>
+                            <img src={data?.img_hamburger} alt="hamburger"/>
                         </label>
                     </div>
                 </div>
@@ -77,7 +63,7 @@ export const Navbar: FC<Props> = () => {
                         {/*logo*/}
                         <div className={"d-none d-lg-block col-auto logo-wrapper"} style={{paddingRight: "125px"}}>
                             <Link to={"/"}>
-                                <img src={"/img/logo-full.png"} style={{width: "174px", height: "56px"}}
+                                <img src={data?.logo_full} style={{width: "174px", height: "56px"}}
                                      alt={"logo"}/>
                             </Link>
                         </div>

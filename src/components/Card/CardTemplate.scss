@@ -29,15 +29,15 @@
 @media (max-width: $mobile-breakpoint) {
 
   .card {
-    padding: 21px 21px 24px 21px;
+    padding: 21px 21px 28px 21px;
 
     .img-wrapper {
       max-width: 286px;
-      height: 214px;
+      height: 226px;
     }
 
     .card-name {
-      padding: 25px 0;
+      padding: 23px 0 22px 0;
       font-weight: 700;
       font-size: 18px;
     }

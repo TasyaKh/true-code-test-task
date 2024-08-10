@@ -2,6 +2,7 @@
 
 .team-cards {
 
+
   .team-card {
     .card-img {
       outline: $border;
@@ -38,6 +39,14 @@
   @media (max-width: $mobile-breakpoint) {
     margin: 35px 0;
 
+
+    .team-card {
+      .card-img {
+        height: 401px;
+        width: 285px;
+      }
+    }
+
     .cards-wrapper {
       margin-top: 35px;
       margin-bottom: 35px;
@@ -64,12 +73,19 @@
   }
 
   @media (min-width: $mobile-breakpoint) {
-    margin: 80px 0 0 0;
+    //margin: 80px 0 0 0;
     transform: translateX(-2px);
 
+    .team-card {
+      .card-img {
+        height: 397px;
+        width: 285px;
+      }
+    }
+
     .cards-wrapper {
-      gap: 30px;
-      margin-top: 82px;
+      gap: 28px;
+      margin-top: 80px;
       margin-bottom: 92px;
 
       .team-card {
@@ -89,4 +105,5 @@
 
     }
   }
+
 }

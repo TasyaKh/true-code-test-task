@@ -5,6 +5,7 @@ import {Footer} from "../../components/Footer/Footer";
 import {Comment} from "./Comment/Comment";
 import {getReviewsPage,} from "../../api/pages";
 import {ExpandableElem} from "../../components/elements/ExpandableElem/ExpandableElem";
+import gauss from "assets/gauss.png"
 
 interface Props {
 }
@@ -63,17 +64,17 @@ export const ReviewsPage: FC<Props> = () => {
             </div>
 
             <div className={"img-gauss mobile-hide"}>
-                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                <img className={"img-resizable"} src={gauss} alt={""}/>
             </div>
 
             <div className={"img-gauss1 pc-hide"}>
-                <img className={"img-resizable"} src={"/img/gauss.png"} alt={""}/>
+                <img className={"img-resizable"} src={gauss} alt={""}/>
             </div>
-
             {/*experience*/}
             <div className={"img-experience mobile-hide"}>
                 <div className={"animate-circle"}>
-                    <img className={"img-contain"} src={"img/animate/experience.png"} alt={""}/>
+
+                    <img className={"img-contain"} src={data?.img_live} alt={""}/>
                 </div>
             </div>
 
