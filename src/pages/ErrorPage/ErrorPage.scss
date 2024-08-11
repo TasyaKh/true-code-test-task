@@ -25,6 +25,10 @@
 
   @media (min-width: $mobile-breakpoint) {
 
+    .btn-wrapper{
+      margin-right: 20px;
+    }
+
     .header-number {
       font-size: 100px;
       //margin-bottom: 45px;
@@ -48,10 +52,11 @@
 
     .error-wrapper {
       button {
-        width: 469px;
+        padding: 10px 91px;
+        //width: 469px;
         height: 55px;
 
-        letter-spacing: -1px;
+       // letter-spacing: -1px;
         font-family: Panton;
         font-size: 18px;
         font-weight: 400;

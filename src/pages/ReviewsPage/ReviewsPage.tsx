@@ -73,7 +73,6 @@ export const ReviewsPage: FC<Props> = () => {
             {/*experience*/}
             <div className={"img-experience mobile-hide"}>
                 <div className={"animate-circle"}>
-
                     <img className={"img-contain"} src={data?.img_live} alt={""}/>
                 </div>
             </div>

@@ -12,7 +12,7 @@
 
   .text {
     //max-width: 601px;
-    margin-right: 67.74px;
+    margin-right: 55px;
   }
 
   img {
@@ -51,6 +51,10 @@
     transform: translateY(-165px);
     //transform: rotate(45deg);
   }
+
+  @media (min-width: $mobile-breakpoint) {
+    margin-bottom: 85px;
+  }
 }
 
 .vacancy3{
@@ -61,7 +65,7 @@
 
   .text {
     max-width: 635px;
-    margin-right: 142px;
+    margin-right: 132px;
   }
 
   img {
@@ -69,5 +73,9 @@
     height: 285px;
     //transform: translateY(-57px);
     //transform: rotate(45deg);
+  }
+
+  @media (min-width: $mobile-breakpoint) {
+    margin-bottom: 85px;
   }
 }

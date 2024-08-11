@@ -33,9 +33,9 @@
 
   .img-experience{
     position: absolute;
-    top: 611px;
+    top: 575px;
     left: -186px;
-    z-index: -1;
+    z-index: 1;
     width: 517px;
     height: 489px;
   }
@@ -46,12 +46,17 @@
 
   @media (min-width: $mobile-breakpoint) {
 
+    p{
+      margin-top: 25px;
+    }
+
+
     h3{
       margin-top: 0;;
     }
     .reviews-wrapper{
       margin-bottom: 80px;
-      margin-top: 42px;
+      margin-top: 38px;
     }
     .comments{
       gap: 35px;
@@ -61,15 +66,15 @@
   @media (max-width: $mobile-breakpoint) {
 
     h3{
-      margin: 35px 0 26px 0;
+      margin: 35px 0 24px 0;
     }
 
     .reviews-wrapper{
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     .comments{
-      gap: 30px;
+      gap: 35px;
     }
   }
 

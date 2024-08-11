@@ -2,7 +2,7 @@
 
 .vacancy-template {
 
-  h4{
+  h4 {
     margin-top: 0;
   }
 
@@ -16,74 +16,102 @@
     height: 463px;
   }
 
+  .vacancy-wrapper{
+    h3{
+      text-align: center;
+    }
+  }
   @media (max-width: $mobile-breakpoint) {
 
-    button{
-      padding: 13px 33px;
-    }
 
-    .btn-wrapper{
-      text-align: center;
-      //margin-top: 35px;
-    }
+    .vacancy-wrapper {
 
-    .content {
-      margin-top: 35px;
-      margin-bottom: 35px;
+      button {
+        padding: 13px 33px;
+      }
 
-      .subtitle{
+      .btn-wrapper {
         text-align: center;
+        margin-top: 35px;
       }
 
-      h3{
-        margin: 30px 0;
-      }
+      .content {
+        margin-top: 35px;
+        margin-bottom: 35px;
 
-      h4{
-        margin-bottom: 30px ;
-      }
+        .subtitle {
+          text-align: center;
+        }
 
-      .text {
-        margin: 0px;
+        h3 {
+          margin: 30px 0 25px 0;
+        }
+
+        h4 {
+          margin-bottom: 30px;
+        }
+
+        .text {
+          margin: 0px;
+        }
       }
     }
+
   }
 
   @media (min-width: $mobile-breakpoint) {
 
-    .btn-wrapper{
-      text-align: start;
-    }
+    .vacancy-wrapper {
+
+      .p1{
+        margin: 25px 0 25px 0;
+      }
+      ul{
+        padding-left: 1rem;
+      }
+
+      .btn-wrapper {
+        text-align: start;
+      }
 
 
-    h3{
-      margin-top: 40px;
+      h3 {
+        margin-top: 40px;
+      }
+
+      .content {
+        margin-top: 40px;
+        margin-bottom: 50px;
+
+        button {
+          width: 211px;
+          //styleName: P4;
+          font-family: Panton SemiBold;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 21.87px;
+          text-align: center;
+
+        }
+
+
+        .title {
+          //margin-bottom: 60px;
+          margin-bottom: 50px;
+        }
+
+        .subtitle {
+          letter-spacing: 0.4px;
+          margin: 0;
+        }
+      }
     }
 
     .content {
-      margin-top: 40px;
-      margin-bottom: 60px;
-
-      button{
-        width: 211px;
-      }
-
 
       .title {
-        //margin-bottom: 60px;
-        margin-bottom: 50px;
+        text-align: center;
       }
-
-      .subtitle {
-        margin-top: 0;
-      }
-    }
-  }
-
-  .content {
-
-    .title {
-      text-align: center;
     }
   }
 }

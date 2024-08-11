@@ -16,7 +16,7 @@
 
   .comment-text {
 
-    margin: 25px 33px 25px 35px;
+    margin: 20px 33px 25px 35px;
 
     .author {
       text-align: end;
@@ -45,8 +45,19 @@
 
   @media (min-width: $mobile-breakpoint) {
 
+    .comment-text {
+      margin: 20px 33px 20px 35px;
+    }
+
+    .p1{
+      //letter-spacing: -0.01em;
+    }
+
+
     .author {
+      margin-top: 8px !important;
       font-size: 18px;
+      margin-right: 10px;
     }
 
     .comment-wrapper {
@@ -61,11 +72,15 @@
 
   @media (max-width: $mobile-breakpoint) {
 
+    p{
+      margin-top: 20px;
+    }
     .comment-text{
         margin: 25px;
 
     }
     .position{
+      letter-spacing: -0.1px;
       max-width: 179px;
       font-size: 16px;
       font-weight: 700;

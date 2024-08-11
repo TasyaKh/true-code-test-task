@@ -34,7 +34,7 @@ export const ErrorPage: FC<Props> = () => {
                         <div className={"header-text"}>
                             {data?.text}
                         </div>
-                        <div className={"d-flex justify-content-center"}>
+                        <div className={"d-flex justify-content-center btn-wrapper"}>
                             <Link to={"/"}>
                                 <button className={"btn light"}> {data?.btn_back}   </button>
                             </Link>

@@ -16,7 +16,7 @@ export const VacancyTemplate: FC<Props> = ({child, title}) => {
         <div className={"vacancy-template"}>
             <div className={"container-full"}>
                 <Navbar/>
-                <div className={"container"}>
+                <div className={"container vacancy-wrapper"}>
                     <div className={"content"}>
                         <h3 className={"title"}>
                             {title}

@@ -16,13 +16,15 @@ export const VacancyWrapper = () => {
 
     useEffect(() => {
         getVacancies()
-    }, []);
+    }, [key]);
 
     const getVacancies = async () => {
         const d = await getAllVacancies()
         setData(d)
+
         const cV = d?.vacancies[key ?? ""]
         setCurrentVacancy(cV)
+        console.log("vacancy " , key, cV)
     }
 
     switch (key) {
