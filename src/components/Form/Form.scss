@@ -62,11 +62,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       margin-right: 10px;
-      outline: $border;
-      border-radius: 8px;
+      outline: 2px solid var(--bg-2);
+      border-radius: 4px;
 
       .img {
         width: 16px;
@@ -132,7 +132,9 @@
     .btn-wrapper{
 
       button{
+        padding: 13px 34px;
         //styleName: P4;
+        letter-spacing: -0.4px;
         font-family: Panton SemiBold;
         font-size: 18px;
         font-weight: 600;
@@ -226,7 +228,7 @@
     }
 
     .text-or {
-      margin-top: 20px;
+      margin-top: 23px;
       margin-bottom: 12px;
     }
 
@@ -261,7 +263,7 @@
     }
 
     .form-wrapper {
-      margin: 55px 45px 40px 40px;
+      margin: 55px 45px 40px 45px;
       //width: 40%;
     }
 

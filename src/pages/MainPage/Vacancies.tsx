@@ -24,7 +24,7 @@ export const Vacancies: FC<Props> = () => {
 
 
     return (
-        <div className={""}>
+        <div className={"main"}>
             <Navbar/>
             <div className={"container"}>
                 <div className="main-page">
@@ -52,7 +52,7 @@ export const Vacancies: FC<Props> = () => {
                         </div>
                     </div>
 
-                    <div className={"flex-column d-flex align-items-center"}>
+                    <div className={"flex-column d-flex"}>
                         {/* cards section */}
                         <div className={""}>
                             <Cards cards={data?.cards} data={data}/>
