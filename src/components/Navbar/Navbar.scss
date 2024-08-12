@@ -71,6 +71,10 @@
   @media (max-width: $lg-breakpoint) {
     padding-top: 17px;
 
+    .btn-invisible{
+      justify-content: center;
+    }
+
     .collapsible-wrapper{
       justify-content: center;
     }
@@ -124,6 +128,9 @@
   @media (min-width: $lg-breakpoint) {
     padding-top: 25px;
 
+    .btn-invisible{
+      justify-content: end;
+    }
 
     .phone-number{
       a{
@@ -149,7 +156,7 @@
 
     .menu-wrapper {
       gap: 25px;
-      padding: 0px 79px 0 72px;
+      padding: 0px 79px 0 82px;
     }
 
     .collapsible {

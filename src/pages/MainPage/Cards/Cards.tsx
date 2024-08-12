@@ -73,12 +73,12 @@ export const Cards: FC<Props> = ({cards, data}) => {
     return (
         <div className={"cards"}>
             <div className={"mobile-hide"}>
-                <CarouselBasic childs={cardsElems ?? []} expandCount={3} visibleCount={3} cardsStyle={"cards-wrapper"}/>
+                <CarouselBasic childs={cardsElems ?? []} expandCount={3} visibleCount={3} cardsStyle={"cards-wrapper justify-content-center justify-content-lg-start"}/>
             </div>
 
             <div className={"pc-hide"}>
                 <ExpandableElem childs={cardsElems ?? []} expandCount={3} visibleCount={3}
-                                cardsStyle={"cards-wrapper"}/>
+                                cardsStyle={"cards-wrapper justify-content-center justify-content-lg-start"}/>
             </div>
         </div>
     )

@@ -42,7 +42,7 @@ export const WhoWePage: FC<Props> = () => {
                             <div className={"logo"}>
                                 <img src={data?.logo_short} alt={""}/>
                             </div>
-                            <h6 className={"m-0"}>
+                            <h6 >
                                 {data?.text_top}
                             </h6>
                         </div>
@@ -159,7 +159,7 @@ export const WhoWePage: FC<Props> = () => {
                         </div>
 
                         <div className={"row contacts-wrapper justify-content-center"}>
-                            <div className={"col-sm-auto col-12 d-flex align-items-center justify-content-center"}>
+                            <div className={"col-xl-auto col-12 d-flex align-items-center justify-content-center"}>
                                 <a className={"phone "} href={`tel:${data?.phone?.phone_link}`}>
                                     <div className={"p4"}>{data?.phone?.number}</div>
                                 </a>

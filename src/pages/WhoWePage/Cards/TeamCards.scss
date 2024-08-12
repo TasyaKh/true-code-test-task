@@ -8,7 +8,7 @@
       outline: $border;
       border-radius: $radius-20;
       max-height: 401px;
-      max-width: 285px;
+      max-width: 283px;
       overflow: hidden;
     }
 
@@ -78,19 +78,23 @@
 
     .team-card {
       .card-img {
-        height: 397px;
+        height: 401px;
         width: 285px;
       }
     }
 
     .cards-wrapper {
-      gap: 28px;
-      margin-top: 80px;
+      gap: 29px;
+      margin-top: 76px;
       margin-bottom: 92px;
 
       .team-card {
         .card-img {
 
+        }
+
+        &:last-child.team-card{
+          transform: translateX(3px);
         }
 
         .card-name {

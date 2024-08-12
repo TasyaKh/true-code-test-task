@@ -15,6 +15,10 @@
   }
 
 
+  h6 {
+    margin: 0;
+  }
+
   .img-gauss2 {
     position: absolute;
     top: 760px;
@@ -62,7 +66,8 @@
       .row {
         justify-items: center;
         margin-top: 37px;
-        &:first-child{
+
+        &:first-child {
           margin-top: 0;
         }
 
@@ -167,21 +172,21 @@
         margin-top: 35px;
       }
     }
-    .table-wrapper{
+    .table-wrapper {
       margin-bottom: 30px;
     }
     .text-achievement {
       margin-bottom: 50px;
     }
-      .table-achievements{
+    .table-achievements {
       letter-spacing: -0.3px;
     }
 
-    .table_wrapper-empty{
+    .table_wrapper-empty {
       margin-top: 13px !important;
     }
 
-    .empty-year{
+    .empty-year {
       margin-bottom: 0 !important;
     }
 
@@ -197,7 +202,8 @@
     }
 
     .contacts-wrapper {
-      gap: 25px;
+      gap: 3px;
+      margin-left: -4px;
 
       .phone {
         font-family: Panton Light, serif;
@@ -233,7 +239,7 @@
       .text {
         //margin-top: 30px;
         margin-top: 26px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         display: flex;
         justify-content: center;
       }
@@ -245,12 +251,13 @@
       }
     }
 
-    .team{
+    .team {
 
-      .h6-p1{
+      .h6-p1 {
         letter-spacing: -0.4px;
       }
-      .img-3d-wrapper{
+
+      .img-3d-wrapper {
         margin-top: 35px;
       }
     }
@@ -339,13 +346,14 @@
       margin-bottom: 35px;
       font-weight: 400;
 
-      &:last-child{
+      &:last-child {
         margin-bottom: 0;
       }
     }
 
 
   }
+
 
   @media (min-width: $mobile-breakpoint) {
 
@@ -363,6 +371,8 @@
     .top {
       h6 {
         max-width: 557px;
+        width: 557px;
+        letter-spacing: 0.045rem;
       }
     }
     .content {
@@ -400,7 +410,7 @@
       h3 {
         margin-top: 55px;
         margin-bottom: 26px;
-        letter-spacing: 0.04rem;
+        letter-spacing: 0rem;
       }
 
       h6 {
@@ -421,7 +431,7 @@
     }
 
     .video-wrapper {
-      margin: 80px 0 0 0;
+      margin: 76px 0 0 0;
 
       .video {
 
@@ -442,12 +452,12 @@
 
     .team {
       .img-3d-wrapper {
-        margin-top: 88px;
+        margin-top: 90px;
         margin-bottom: 46px;
       }
 
       .h6-p1 {
-        letter-spacing: 0.2px;
+        letter-spacing: 0.045rem;
         max-width: 1011px;
       }
     }
@@ -455,7 +465,7 @@
 
     .projects {
       .img-3d-wrapper {
-        margin: 80px 0 85px 0;
+        margin: 85px 0 85px 0;
       }
     }
 
@@ -476,7 +486,7 @@
 
       h3 {
         margin-left: 231px;
-        letter-spacing: -1px;
+        letter-spacing: -0px;
       }
 
       .table-wrapper {
@@ -508,7 +518,7 @@
 
     .text-1 {
       letter-spacing: 0.2px;
-      min-width: 559px;
+      //min-width: 559px;
       margin-right: 174px;
     }
 
@@ -544,4 +554,27 @@
       }
     }
   }
+
+  @media (max-width: $xl-breakpoint) {
+    h6 {
+      margin: 40px 0;
+      width: auto !important;
+    }
+
+   .table-wrapper{
+     margin-left: 0 !important;
+   }
+
+    .contacts-wrapper{
+      .phone{
+        margin: 20px 0 !important;
+      }
+
+    }
+
+    h3{
+      margin-left: 0 !important;
+    }
+  }
+
 }

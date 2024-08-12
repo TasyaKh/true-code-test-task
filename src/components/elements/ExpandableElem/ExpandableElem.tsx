@@ -46,7 +46,7 @@ export const ExpandableElem: FC<Props> = ({
 
     return (
         <div className={"expandable-elem"}>
-            <div className={`row ${cardsStyle}`}>
+            <div className={`row ${cardsStyle} `}>
                 {activeElems}
             </div>
             <div className={" d-flex justify-content-center button-down"} onClick={onExpand}>

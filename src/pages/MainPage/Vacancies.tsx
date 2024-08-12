@@ -36,14 +36,14 @@ export const Vacancies: FC<Props> = () => {
                             <h6>{data?.subheader}</h6>
                         </div>
 
-                        <div className={"col-auto mobile-hide "} style={{marginRight: "112px", zIndex:-1}}>
-                            <img src={data?.img_top} className={"img-resizable"}
+                        <div className={"col-auto mobile-hide "} style={{marginRight: "112px", zIndex: -1}}>
+                            <img src={data?.img_top} className={"img-resizable d-none d-xl-block"}
                                  style={{width: "363px", height: "406px", transform: "translate(0px, -37px)"}}
                                  alt={""}/>
                         </div>
                         <div className={"col-auto  mobile-hide"}>
                             {/*<div className={""} style={{position: "relative", overflow:"hide"}}>*/}
-                            <div className={"img-live"}>
+                            <div className={"img-live d-none d-xl-block"}>
                                 <div className={"animate-circle"}>
                                     <img className={"img-resizable"} src={data?.img_live} alt={""}/>
                                 </div>
@@ -58,8 +58,10 @@ export const Vacancies: FC<Props> = () => {
                             <Cards cards={data?.cards} data={data}/>
                         </div>
 
-                        <div className={"pc-hide img-above-form"}>
-                            <img className={"img-resizable"} src={data?.img_top} alt={""}/>
+                        <div className={"pc-hide justify-content-center d-flex"} style={{width: "100%"}}>
+                            <div className={" img-above-form"}>
+                                <img className={"img-resizable"} src={data?.img_top} alt={""}/>
+                            </div>
                         </div>
 
                         <div className={"form-elem"} style={{width: "100%"}}>
