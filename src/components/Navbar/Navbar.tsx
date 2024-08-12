@@ -112,7 +112,7 @@ export const Navbar: FC<Props> = () => {
                             </div>
 
                         </div>
-                        <div className={"col-12 col-lg d-flex justify-content-center align-items-center"}>
+                        <div className={"col-12 col-lg d-flex justify-content-end align-items-center"}>
                             <Link to={"/form"}>
                                 <button className={"btn light btn-send-request"}>{data?.button_request}</button>
                             </Link>

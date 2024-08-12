@@ -4,6 +4,10 @@
   position: relative;
   overflow: hidden;
 
+  .reviews-wrapper{
+    position: relative;
+  }
+
   .img-gauss {
     position: absolute;
     top: 283px;
@@ -33,10 +37,10 @@
 
   .img-experience{
     position: absolute;
-    top: 575px;
-    left: -186px;
-    z-index: 1;
-    width: 517px;
+    top: 435px;
+    left: -296px;
+    z-index: -1;
+    width: 527px;
     height: 489px;
   }
 

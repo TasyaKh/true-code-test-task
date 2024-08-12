@@ -61,6 +61,14 @@ export const ReviewsPage: FC<Props> = () => {
                     cardsStyle={"comments"}/>
 
                 </div>
+
+                {/*experience*/}
+                <div className={"img-experience mobile-hide"}>
+                    <div className={"animate-circle"}>
+                        <img className={"img-contain"} src={data?.img_live} alt={""}/>
+                    </div>
+                </div>
+
             </div>
 
             <div className={"img-gauss mobile-hide"}>
@@ -69,12 +77,6 @@ export const ReviewsPage: FC<Props> = () => {
 
             <div className={"img-gauss1 pc-hide"}>
                 <img className={"img-resizable"} src={gauss} alt={""}/>
-            </div>
-            {/*experience*/}
-            <div className={"img-experience mobile-hide"}>
-                <div className={"animate-circle"}>
-                    <img className={"img-contain"} src={data?.img_live} alt={""}/>
-                </div>
             </div>
 
             <Footer/>

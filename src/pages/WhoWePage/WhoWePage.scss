@@ -115,6 +115,7 @@
     position: relative;
     width: 279px;
     max-height: 275px;
+    z-index: -1;
 
     img {
       width: 100%;
@@ -199,7 +200,7 @@
       gap: 25px;
 
       .phone {
-        font-family: Panton-Light, serif;
+        font-family: Panton Light, serif;
         font-size: 24px;
         font-weight: 300;
         line-height: 36px;
@@ -377,7 +378,7 @@
 
         .p4 {
           margin-top: 8px;
-          font-family: Panton-Light, serif;
+          font-family: Panton Light, serif;
           font-size: 24px;
           font-weight: 300;
           line-height: 36px;

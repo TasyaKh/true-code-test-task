@@ -1,6 +1,8 @@
-@import "../../scss/vars";
+@import "src/scss/vars";
 
 .vacancy-template {
+  position: relative;
+  overflow: hidden;
 
   h4 {
     margin-top: 0;

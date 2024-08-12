@@ -36,6 +36,7 @@
     overflow: hidden;
     outline: $border;
 
+
     img {
       object-fit: cover;
       width: 100%;
@@ -45,8 +46,16 @@
 
   @media (min-width: $mobile-breakpoint) {
 
+    .avatar-answer{
+      margin-top: -3px;
+    }
+
+    .comment-text-wrapper{
+      letter-spacing: -0.4px;
+    }
+
     .comment-text {
-      margin: 20px 33px 20px 35px;
+      margin: 24px 33px 15px 35px;
     }
 
     .p1{

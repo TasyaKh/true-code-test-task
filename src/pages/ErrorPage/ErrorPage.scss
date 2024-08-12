@@ -2,6 +2,7 @@
 
 .error-page {
   position: relative;
+  overflow: hidden;
 
   .img-gauss {
     max-height: 100%;
@@ -25,6 +26,9 @@
 
   @media (min-width: $mobile-breakpoint) {
 
+    .p4{
+      min-width: 158px;
+    }
     .btn-wrapper{
       margin-right: 20px;
     }

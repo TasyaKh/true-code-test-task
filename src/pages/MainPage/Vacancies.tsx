@@ -59,7 +59,7 @@ export const Vacancies: FC<Props> = () => {
                         </div>
 
                         <div className={"pc-hide img-above-form"}>
-                            <img className={"img-resizable"} src={"/img/img.png"} alt={""}/>
+                            <img className={"img-resizable"} src={data?.img_top} alt={""}/>
                         </div>
 
                         <div className={"form-elem"} style={{width: "100%"}}>

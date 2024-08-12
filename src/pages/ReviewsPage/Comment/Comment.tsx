@@ -30,7 +30,7 @@ export const Comment: FC<Props> = ({
                 {!isAuthorLeftSide && position}
 
                 <div className={`col-auto d-flex `}>
-                    <div className={"avatar"}>
+                    <div className={`avatar ${!isAuthorLeftSide ? "avatar-answer" : ""}`} >
                         <img src={avatar} alt={"avatar"}/>
                     </div>
                 </div>

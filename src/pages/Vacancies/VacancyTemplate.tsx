@@ -14,7 +14,7 @@ export const VacancyTemplate: FC<Props> = ({child, title}) => {
 
     return (
         <div className={"vacancy-template"}>
-            <div className={"container-full"}>
+            {/*<div className={"container-full"}>*/}
                 <Navbar/>
                 <div className={"container vacancy-wrapper"}>
                     <div className={"content"}>
@@ -29,7 +29,7 @@ export const VacancyTemplate: FC<Props> = ({child, title}) => {
                     </div>
                 </div>
                 <Footer/>
-            </div>
+            {/*</div>*/}
         </div>
     )
 

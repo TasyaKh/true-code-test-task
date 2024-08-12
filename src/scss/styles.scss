@@ -9,29 +9,29 @@
 }
 
 @font-face {
-  font-family: Panton-Light;
+  font-family: Panton Light;
   src: url("~/src/assets/fonts/Panton/Panton-Trial-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: Panton-ExtraLight;
+  font-family: Panton ExtraLight;
   src: url("~/src/assets/fonts/Panton/Panton-Trial-ExtraLight.ttf") format("truetype");
 }
 
 
 @font-face {
-  font-family: Panton-SemiBold;
+  font-family: Panton SemiBold;
   src: url("~/src/assets/fonts/Panton/Panton-Trial-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: Panton-Bold;
+  font-family: Panton Bold;
   src: url("~/src/assets/fonts/Panton/Panton-Trial-Bold.ttf") format("truetype");
 }
 
 
 @font-face {
-  font-family: Panton-ExtraBold;
+  font-family: Panton ExtraBold;
   src: url("~/src/assets/fonts/Panton/Panton-Trial-ExtraBold.ttf") format("truetype");
 }
 
@@ -98,7 +98,7 @@ a {
 .btn {
   border: none;
   border-radius: $radius;
-  padding: 13px 37px;
+  padding: 13px 35px;
   cursor: pointer;
   //styleName: P5;
   font-family: Panton SemiBold, serif;
@@ -146,10 +146,22 @@ a {
 }
 
 ul {
-  padding-left: 0.6rem;
+  padding-left: 1rem;
+ // list-style: none;
 
   li {
+   // display: flex;
+   // align-items: center;
     color: var(--bg-2); /* bullet color */
+
+
+    &::marker{
+      font-size: 6px;
+      //content: ".";
+      //
+      //font-size: 30px;
+     // vertical-align: top;
+    }
   }
 }
 
@@ -193,9 +205,9 @@ h4 {
   .btn-send-request {
     font-size: 16px;
     font-weight: 600;
-    width: 169px;
+    //width: 169px;
     max-height: 45px;
-    padding: 13px 30px;
+    padding: 13px 28px;
     border-radius: 6px;
   }
 
@@ -331,7 +343,7 @@ h4 {
   .btn-send-request {
     min-width: 171px;
     max-height: 45px;
-    padding: 12px 37px;
+    padding: 12px 35px;
   }
 
   .pc-hide {
@@ -414,7 +426,7 @@ h4 {
 
   .p3 {
     font-size: 12px;
-    font-family: Panton-Light, serif;
+    font-family: Panton Light, serif;
     font-weight: 300;
     line-height: 14.8px;
   }

@@ -44,6 +44,7 @@
 
 
   @media (max-width: $mobile-breakpoint) {
+
     h4{
       margin: 0;
     }
@@ -55,6 +56,10 @@
 
 
   @media (min-width: $mobile-breakpoint) {
+
+    .p1{
+      letter-spacing: -0.4px;
+    }
 
     ul{
       margin: 0;
