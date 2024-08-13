@@ -3,6 +3,7 @@ import "./Navbar.scss"
 import {Link} from "react-router-dom";
 import {Dropdown} from "../elements/Dropdown";
 import {getHeaderContent} from "../../api/pages";
+import {SplineContacts} from "../elements/SplineContacts/SplineContacts";
 
 interface Props {
 
@@ -21,9 +22,20 @@ export const Navbar: FC<Props> = () => {
         setData(d)
     }
 
+    function openNav() {
+        const f = document.getElementById("myNav");
+        if (f) f.style.width = "100%"
+    }
+
+    function closeNav() {
+        const f = document.getElementById("myNav");
+        if (f) f.style.width = "0%";
+    }
+
     return (
         <div className={"container"}>
             <nav className={"navbar"}>
+
                 <div className={"row"}>
                     <div className={"d-lg-none col"} style={{marginBottom: "23px"}}>
                         <Link to={"/"} className={""}>
@@ -58,81 +70,91 @@ export const Navbar: FC<Props> = () => {
                     </div>
                 </div>
                 <input type="checkbox" id="collapse"/>
+                {/*collapsible*/}
                 <div className="collapsible">
-                    <div className={"row collapsible-wrapper"}>
-                        {/*logo*/}
-                        <div className={"d-none d-lg-block col-auto logo-wrapper"} style={{paddingRight: "125px"}}>
-                            <Link to={"/"}>
-                                <img src={data?.logo_full} style={{width: "174px", height: "56px"}}
-                                     alt={"logo"}/>
-                            </Link>
-                        </div>
-                        <div className={"d-none d-lg-flex col-auto d-flex align-items-center phone-number"}>
-                            <a className={"phone "} href={`tel:${data?.phone?.number_link}`}>
-                                {data?.phone?.number}
-                            </a>
+                    <div className={"collapsible-wrapper"}>
+                        <div className={"container" }>
+                            <div className={"row justify-content-end "} style={{textAlign: "end"}}>
+                                <label htmlFor="collapse" style={{marginRight:"20px"}}>
+                                    <img src={data?.img_hamburger} alt="hamburger"/>
+                                </label>
+                            </div>
                         </div>
 
-                        <div className={"col-auto d-flex align-items-center justify-content-center"}>
-                            <div className={"row menu-wrapper"}>
-                                {data?.links && Object.keys(data?.links).map((key, index) =>
-                                    <div className={"col-12 col-lg-auto p-0 d-flex justify-content-center"}>
-                                        {/* dropdown */}
+                            <div className={"row nav-content-wrapper"} >
+                                {/*logo*/}
+                                <div className={"d-none d-lg-block col-auto logo-wrapper"}
+                                     style={{paddingRight: "125px"}}>
+                                    <Link to={"/"}>
+                                        <img src={data?.logo_full} style={{width: "174px", height: "56px"}}
+                                             alt={"logo"}/>
+                                    </Link>
+                                </div>
+                                <div className={"d-none d-lg-flex col-auto d-flex align-items-center phone-number"}>
+                                    <a className={"phone "} href={`tel:${data?.phone?.number_link}`}>
+                                        {data?.phone?.number}
+                                    </a>
+                                </div>
 
-                                        {key === "vacancies" &&
-                                            <div className={"d-lg-none d-block"}>
-                                                <Dropdown child={
-                                                    <div className={"row sub-menu-wrapper"}>
+                                <div className={"col-auto d-flex align-items-center justify-content-center"}>
+                                    <div className={"row menu-wrapper"}>
+                                        {data?.links && Object.keys(data?.links).map((key, index) =>
+                                            <div className={"col-12 col-lg-auto p-0 d-flex justify-content-center"}>
+                                                {/* dropdown */}
 
-                                                        {data?.vacancies && Object.keys(data?.vacancies).map((key2,index) => (
+                                                {key === "vacancies" &&
+                                                    <div className={"d-lg-none d-block"}>
+                                                        <Dropdown child={
+                                                            <div className={"row sub-menu-wrapper"}>
 
-                                                            <div
-                                                                className={"col-12 col-lg-auto p-0 d-flex justify-content-center " +
-                                                                    ""}>
-                                                                <Link to={`/vacancy?key=${key2}`}>
+                                                                {data?.vacancies && Object.keys(data?.vacancies).map((key2, index) => (
+
                                                                     <div
-                                                                        className={"sub-link link"}> {data?.vacancies[key2]?.header}</div>
-                                                                </Link>
+                                                                        className={"col-12 col-lg-auto p-0 d-flex justify-content-center " +
+                                                                            ""}>
+                                                                        <Link to={`/vacancy?key=${key2}`}>
+                                                                            <div
+                                                                                className={"sub-link link"}> {data?.vacancies[key2]?.header}</div>
+                                                                        </Link>
 
+                                                                    </div>
+
+                                                                ))}
                                                             </div>
+                                                        } title={data?.links[key]}/>
+                                                    </div>}
 
-                                                        ))}
-                                                    </div>
-                                                } title={data?.links[key]}/>
-                                            </div>}
+                                                <div className={`${key === "vacancies" ? "d-lg-block d-none" : ""} `}>
+                                                    <Link to={key}>
+                                                        <div className={"link"}> {data?.links[key]}</div>
+                                                    </Link>
+                                                </div>
 
-                                        <div className={`${key === "vacancies" ? "d-lg-block d-none" : ""} `}>
-                                            <Link to={key}>
-                                                <div className={"link"}> {data?.links[key]}</div>
-                                            </Link>
-                                        </div>
-
+                                            </div>
+                                        )}
                                     </div>
-                                )}
-                            </div>
+
+                                </div>
+                                <div className={"col-12 col-lg d-flex btn-invisible align-items-center"}>
+                                    <Link to={"/form"}>
+                                        <button className={"btn light btn-send-request"}>{data?.button_request}</button>
+                                    </Link>
+                                </div>
+                                <div className={"contacts-mobile row d-lg-none d-flex"}>
+
+                                    <div className={"col-12 d-flex justify-content-center phone-number"}>
+                                        <a className={"phone "} href={`tel:${data?.phone?.number_link}`}>
+                                            {data?.phone?.number}
+                                        </a>
+                                    </div>
+
+                                    <div className={"col-12 d-flex justify-content-center "}>
+                                        <SplineContacts widthIcon={14} heightIcon={14} radius={8} data={data?.socials} gap={"15.7px"}/>
+                                    </div>
+                                </div>
+
 
                         </div>
-                        <div className={"col-12 col-lg d-flex btn-invisible align-items-center"}>
-                            <Link to={"/form"}>
-                                <button className={"btn light btn-send-request"}>{data?.button_request}</button>
-                            </Link>
-                        </div>
-                        <div className={"contacts-mobile row d-lg-none d-flex"}>
-
-                            <div className={"col-12 d-flex justify-content-center phone-number"}>
-                                <a className={"phone "} href={`tel:${data?.phone?.number_link}`}>
-                                    {data?.phone?.number}
-                                </a>
-                            </div>
-
-                            <div className={"col-12 d-flex justify-content-center "}
-                                 style={{gap: "11.7px"}}>
-                                <div className={"navbar-icon icon-vk"}></div>
-                                <div className={"navbar-icon icon-facebook"}></div>
-                                <div className={"navbar-icon icon-instagram"}></div>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
             </nav>

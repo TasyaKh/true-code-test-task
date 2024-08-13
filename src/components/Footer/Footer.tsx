@@ -2,6 +2,7 @@ import {FC, useEffect, useState} from "react";
 import "./Footer.scss"
 import {Link} from "react-router-dom";
 import {getFooterContent,} from "../../api/pages";
+import {SplineContacts} from "../elements/SplineContacts/SplineContacts";
 
 interface Props {
 
@@ -21,7 +22,7 @@ export const Footer: FC<Props> = () => {
     }
 
     return (
-        <div className={"container m-xxl-0 m-0 m-md-auto"}>
+        <div className={"container m-xxl-0 m-0 m-md-auto"} style={{height:"100%", width:"100%"}}>
             <div className={"footer"}>
                 <div className={"footer-wrapper"}>
                     <div className={"row footer-content-wrapper "}>
@@ -44,21 +45,12 @@ export const Footer: FC<Props> = () => {
                                 </div>
                                 <div
                                     className={"col-12 d-flex icons-wrapper justify-content-sm-end justify-content-center"}>
-                                    <a href={data?.socials?.vk?.link}>
-                                        <div className={"icon-rounded"}>
-                                            <div className={"footer-icon icon-vk"}></div>
-                                        </div>
-                                    </a>
-                                    <a href={data?.socials?.facebook?.link}>
-                                        <div className={"icon-rounded"}>
-                                            <div className={"footer-icon icon-facebook"}></div>
-                                        </div>
-                                    </a>
-                                    <a href={data?.socials?.instagram?.link}>
-                                        <div className={"icon-rounded"}>
-                                            <div className={"footer-icon icon-instagram"}></div>
-                                        </div>
-                                    </a>
+                                    <div className={"mobile-hide"}>
+                                        <SplineContacts widthIcon={14} heightIcon={14} radius={8} data={data?.socials} gap={"11.7px"}/>
+                                    </div>
+                                    <div className={"pc-hide"}>
+                                        <SplineContacts widthIcon={36} heightIcon={36} radius={5} data={data?.socials} gap={"22.8px"}/>
+                                    </div>
                                 </div>
                             </div>
                         </div>

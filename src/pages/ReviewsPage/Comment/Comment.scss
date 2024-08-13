@@ -51,11 +51,11 @@
     }
 
     .comment-text-wrapper{
-      letter-spacing: -0.4px;
+      letter-spacing: 0;
     }
 
     .comment-text {
-      margin: 24px 33px 15px 35px;
+      margin: 21px 32px 20px 35px;
     }
 
     .p1{
@@ -80,6 +80,10 @@
   }
 
   @media (max-width: $mobile-breakpoint) {
+
+    .p1{
+      letter-spacing: -0.0px;
+    }
 
     p{
       margin-top: 20px;

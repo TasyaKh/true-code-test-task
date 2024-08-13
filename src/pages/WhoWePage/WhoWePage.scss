@@ -357,6 +357,10 @@
 
   @media (min-width: $mobile-breakpoint) {
 
+    .spline-wrapper{
+      margin-top: 5px;
+    }
+
     .video {
       .text-video {
         width: 393px;
@@ -384,10 +388,11 @@
     .contacts-wrapper {
 
       .phone {
-        margin-right: 225px;
+        margin-top: 0px;
+        margin-right: 230px;
 
         .p4 {
-          margin-top: 8px;
+          margin-top: 12px;
           font-family: Panton Light, serif;
           font-size: 24px;
           font-weight: 300;
@@ -567,7 +572,7 @@
 
     .contacts-wrapper{
       .phone{
-        margin: 20px 0 !important;
+        margin: 20px 0 25px 0 !important;
       }
 
     }

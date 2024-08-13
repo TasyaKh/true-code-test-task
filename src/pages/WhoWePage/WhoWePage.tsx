@@ -8,6 +8,7 @@ import {TeamPhotoCards} from "./Cards/TeamPhotoCards";
 import {EventsCards} from "./Cards/EventsCards";
 import {getWhoWePage} from "../../api/pages";
 import gauss from "assets/gauss.png"
+import {SplineContacts} from "../../components/elements/SplineContacts/SplineContacts";
 
 interface Props {
 }
@@ -165,13 +166,8 @@ export const WhoWePage: FC<Props> = () => {
                                 </a>
                             </div>
                             <div className={"col-sm-auto col-12"}>
-                                <div className={"row"}>
-                                    <div
-                                        className={"col-12 d-flex icons-wrapper align-items-center  justify-content-sm-end justify-content-center"}>
-                                        <div className={"who-we-icon icon-vk"}></div>
-                                        <div className={"who-we-icon icon-facebook"}></div>
-                                        <div className={"who-we-icon icon-instagram"}></div>
-                                    </div>
+                                <div className={"row spline-wrapper"}>
+                                    <SplineContacts widthIcon={36} heightIcon={36} radius={5} data={data?.socials} gap={"25.8px"}/>
                                 </div>
                             </div>
                         </div>

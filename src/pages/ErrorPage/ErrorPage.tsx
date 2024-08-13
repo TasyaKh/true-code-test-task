@@ -24,7 +24,7 @@ export const ErrorPage: FC<Props> = () => {
 
     return (
         <div className="error-page">
-            {/*<div className={"container-full"}>*/}
+            <div className={"container-full"}>
                 <Navbar/>
                 <div className="content error-wrapper">
                     <div className={"container"}>
@@ -44,7 +44,7 @@ export const ErrorPage: FC<Props> = () => {
                 <Footer/>
 
 
-            {/*</div>*/}
+            </div>
             <div className={"img-gauss"}>
                 <img className={"img-resizable"} src={gauss} alt={""}/>
             </div>

@@ -17,6 +17,13 @@
     @media (max-width: $mobile-breakpoint) {
       margin: 0;
 
+      .footer-content-wrapper {
+
+        .phone {
+
+          text-align: center;
+        }
+      }
       .btn-footer {
 
         margin: 2px 0 0 0;
@@ -81,7 +88,8 @@
         margin-bottom: 19px;
 
         .phone {
-          margin-bottom: 10px;
+          margin-bottom: 7px;
+          min-width: 158px;
         }
 
         .btn-footer {
